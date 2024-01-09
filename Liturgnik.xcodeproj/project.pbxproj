@@ -7,18 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F103876F2B4D5DA200B2E807 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
+		F10387722B4D75E000B2E807 /* LecturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10387712B4D75E000B2E807 /* LecturesViewModel.swift */; };
 		F1654E9A2B4D4AF0002964BE /* LiturgnikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */; };
 		F1654E9C2B4D4AF0002964BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E9B2B4D4AF0002964BE /* ContentView.swift */; };
 		F1654E9E2B4D4AF1002964BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1654E9D2B4D4AF1002964BE /* Assets.xcassets */; };
 		F1654EA12B4D4AF1002964BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1654EA02B4D4AF1002964BE /* Preview Assets.xcassets */; };
+		F1654EAE2B4D4B6B002964BE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */; };
+		F1654EB02B4D4B6B002964BE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */; };
+		F1654EB32B4D4B6B002964BE /* ColorWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EB22B4D4B6B002964BE /* ColorWidgetBundle.swift */; };
+		F1654EB72B4D4B6F002964BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1654EB62B4D4B6F002964BE /* Assets.xcassets */; };
+		F1654EBB2B4D4B6F002964BE /* ColorWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
+		F1654EC62B4D4BDF002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
+		F1654EC92B4D4BF8002964BE /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1654EC82B4D4BF8002964BE /* SwiftSoup */; };
+		F1BCEE342B4D518F0020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
+		F1BCEE352B4D518F0020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
+		F1BCEE362B4D518F0020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
+		F1BCEE372B4D518F0020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
+		F1BCEE392B4D51AB0020D3FF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1BCEE382B4D51AA0020D3FF /* SwiftSoup */; };
+		F1BCEE3B2B4D51D70020D3FF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3A2B4D51D70020D3FF /* Provider.swift */; };
+		F1BCEE3D2B4D51E60020D3FF /* ColorWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */; };
+		F1BCEE432B4D52110020D3FF /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
+		F1BCEE442B4D52110020D3FF /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
+		F1BCEE4A2B4D55540020D3FF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */; };
+		F1BCEE4B2B4D55540020D3FF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */; };
+		F1BCEE4E2B4D55540020D3FF /* LecturesWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE4D2B4D55540020D3FF /* LecturesWidgetBundle.swift */; };
+		F1BCEE502B4D55540020D3FF /* LecturesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE4F2B4D55540020D3FF /* LecturesWidget.swift */; };
+		F1BCEE522B4D55560020D3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BCEE512B4D55560020D3FF /* Assets.xcassets */; };
+		F1BCEE562B4D55560020D3FF /* LecturesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F1BCEE5A2B4D555E0020D3FF /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
+		F1BCEE5B2B4D55620020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
+		F1BCEE5C2B4D55650020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
+		F1BCEE5E2B4D557F0020D3FF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE5D2B4D557F0020D3FF /* Provider.swift */; };
+		F1BCEE602B4D560B0020D3FF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1BCEE5F2B4D560B0020D3FF /* SwiftSoup */; };
+		F1D6A0A22B4DEB95009418F1 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
+		F1D6A0A32B4DEB95009418F1 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
+		F1D6A0A42B4DEB95009418F1 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
+		F1D6A0A72B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
+		F1D6A0A82B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
+		F1D6A0A92B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F1654EB92B4D4B6F002964BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1654EAA2B4D4B6A002964BE;
+			remoteInfo = ColorWidgetExtension;
+		};
+		F1BCEE542B4D55560020D3FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1BCEE482B4D55540020D3FF;
+			remoteInfo = LecturesWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1654EBF2B4D4B6F002964BE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F1654EBB2B4D4B6F002964BE /* ColorWidgetExtension.appex in Embed Foundation Extensions */,
+				F1BCEE562B4D55560020D3FF /* LecturesWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F10387712B4D75E000B2E807 /* LecturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewModel.swift; sourceTree = "<group>"; };
 		F1654E962B4D4AF0002964BE /* Liturgnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liturgnik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgnikApp.swift; sourceTree = "<group>"; };
 		F1654E9B2B4D4AF0002964BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1654E9D2B4D4AF1002964BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1654EA02B4D4AF1002964BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ColorWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F1654EB22B4D4B6B002964BE /* ColorWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWidgetBundle.swift; sourceTree = "<group>"; };
+		F1654EB62B4D4B6F002964BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1654EB82B4D4B6F002964BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiedzielaScraper.swift; sourceTree = "<group>"; };
+		F1BCEE322B4D518F0020D3FF /* LectureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureModel.swift; sourceTree = "<group>"; };
+		F1BCEE332B4D518F0020D3FF /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		F1BCEE3A2B4D51D70020D3FF /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWidget.swift; sourceTree = "<group>"; };
+		F1BCEE422B4D52110020D3FF /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LecturesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1BCEE4D2B4D55540020D3FF /* LecturesWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesWidgetBundle.swift; sourceTree = "<group>"; };
+		F1BCEE4F2B4D55540020D3FF /* LecturesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesWidget.swift; sourceTree = "<group>"; };
+		F1BCEE512B4D55560020D3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1BCEE532B4D55560020D3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1BCEE5D2B4D557F0020D3FF /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
+		F1D6A0A62B4DEC19009418F1 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,16 +115,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1654EC92B4D4BF8002964BE /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1654EA82B4D4B6A002964BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1654EB02B4D4B6B002964BE /* SwiftUI.framework in Frameworks */,
+				F1654EAE2B4D4B6B002964BE /* WidgetKit.framework in Frameworks */,
+				F1BCEE392B4D51AB0020D3FF /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1BCEE462B4D55540020D3FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1BCEE4B2B4D55540020D3FF /* SwiftUI.framework in Frameworks */,
+				F1BCEE4A2B4D55540020D3FF /* WidgetKit.framework in Frameworks */,
+				F1BCEE602B4D560B0020D3FF /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F10387702B4D679400B2E807 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F10387712B4D75E000B2E807 /* LecturesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F1654E8D2B4D4AF0002964BE = {
 			isa = PBXGroup;
 			children = (
+				F1D6A0A62B4DEC19009418F1 /* Data.json */,
 				F1654E982B4D4AF0002964BE /* Liturgnik */,
+				F1654EB12B4D4B6B002964BE /* ColorWidget */,
+				F1BCEE412B4D520B0020D3FF /* Utils */,
+				F1BCEE4C2B4D55540020D3FF /* LecturesWidget */,
+				F1654EAC2B4D4B6B002964BE /* Frameworks */,
 				F1654E972B4D4AF0002964BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				F1654E962B4D4AF0002964BE /* Liturgnik.app */,
+				F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */,
+				F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +176,9 @@
 		F1654E982B4D4AF0002964BE /* Liturgnik */ = {
 			isa = PBXGroup;
 			children = (
+				F10387702B4D679400B2E807 /* ViewModel */,
+				F1BCEE312B4D516A0020D3FF /* Model */,
+				F1654EC22B4D4BAA002964BE /* Core */,
 				F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */,
 				F1654E9B2B4D4AF0002964BE /* ContentView.swift */,
 				F1654E9D2B4D4AF1002964BE /* Assets.xcassets */,
@@ -67,6 +195,73 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F1654EAC2B4D4B6B002964BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */,
+				F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1654EB12B4D4B6B002964BE /* ColorWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F1654EB22B4D4B6B002964BE /* ColorWidgetBundle.swift */,
+				F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */,
+				F1BCEE3A2B4D51D70020D3FF /* Provider.swift */,
+				F1654EB62B4D4B6F002964BE /* Assets.xcassets */,
+				F1654EB82B4D4B6F002964BE /* Info.plist */,
+			);
+			path = ColorWidget;
+			sourceTree = "<group>";
+		};
+		F1654EC22B4D4BAA002964BE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F1D6A0A02B4DEB70009418F1 /* Api */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F1BCEE312B4D516A0020D3FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1BCEE332B4D518F0020D3FF /* DayModel.swift */,
+				F1BCEE322B4D518F0020D3FF /* LectureModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1BCEE412B4D520B0020D3FF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F1BCEE422B4D52110020D3FF /* DateUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F1BCEE4C2B4D55540020D3FF /* LecturesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F1BCEE4D2B4D55540020D3FF /* LecturesWidgetBundle.swift */,
+				F1BCEE4F2B4D55540020D3FF /* LecturesWidget.swift */,
+				F1BCEE5D2B4D557F0020D3FF /* Provider.swift */,
+				F1BCEE512B4D55560020D3FF /* Assets.xcassets */,
+				F1BCEE532B4D55560020D3FF /* Info.plist */,
+			);
+			path = LecturesWidget;
+			sourceTree = "<group>";
+		};
+		F1D6A0A02B4DEB70009418F1 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */,
+				F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +272,61 @@
 				F1654E922B4D4AF0002964BE /* Sources */,
 				F1654E932B4D4AF0002964BE /* Frameworks */,
 				F1654E942B4D4AF0002964BE /* Resources */,
+				F1654EBF2B4D4B6F002964BE /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1654EBA2B4D4B6F002964BE /* PBXTargetDependency */,
+				F1BCEE552B4D55560020D3FF /* PBXTargetDependency */,
+			);
+			name = Liturgnik;
+			packageProductDependencies = (
+				F1654EC82B4D4BF8002964BE /* SwiftSoup */,
+			);
+			productName = Liturgnik;
+			productReference = F1654E962B4D4AF0002964BE /* Liturgnik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1654EBC2B4D4B6F002964BE /* Build configuration list for PBXNativeTarget "ColorWidgetExtension" */;
+			buildPhases = (
+				F1654EA72B4D4B6A002964BE /* Sources */,
+				F1654EA82B4D4B6A002964BE /* Frameworks */,
+				F1654EA92B4D4B6A002964BE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Liturgnik;
-			productName = Liturgnik;
-			productReference = F1654E962B4D4AF0002964BE /* Liturgnik.app */;
-			productType = "com.apple.product-type.application";
+			name = ColorWidgetExtension;
+			packageProductDependencies = (
+				F1BCEE382B4D51AA0020D3FF /* SwiftSoup */,
+			);
+			productName = ColorWidgetExtension;
+			productReference = F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1BCEE572B4D55560020D3FF /* Build configuration list for PBXNativeTarget "LecturesWidgetExtension" */;
+			buildPhases = (
+				F1BCEE452B4D55540020D3FF /* Sources */,
+				F1BCEE462B4D55540020D3FF /* Frameworks */,
+				F1BCEE472B4D55540020D3FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LecturesWidgetExtension;
+			packageProductDependencies = (
+				F1BCEE5F2B4D560B0020D3FF /* SwiftSoup */,
+			);
+			productName = LecturesWidgetExtension;
+			productReference = F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +341,12 @@
 					F1654E952B4D4AF0002964BE = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					F1654EAA2B4D4B6A002964BE = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					F1BCEE482B4D55540020D3FF = {
+						CreatedOnToolsVersion = 15.1;
+					};
 				};
 			};
 			buildConfigurationList = F1654E912B4D4AF0002964BE /* Build configuration list for PBXProject "Liturgnik" */;
@@ -111,11 +358,16 @@
 				Base,
 			);
 			mainGroup = F1654E8D2B4D4AF0002964BE;
+			packageReferences = (
+				F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = F1654E972B4D4AF0002964BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F1654E952B4D4AF0002964BE /* Liturgnik */,
+				F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */,
+				F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +379,25 @@
 			files = (
 				F1654EA12B4D4AF1002964BE /* Preview Assets.xcassets in Resources */,
 				F1654E9E2B4D4AF1002964BE /* Assets.xcassets in Resources */,
+				F1D6A0A72B4DEC19009418F1 /* Data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1654EA92B4D4B6A002964BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1654EB72B4D4B6F002964BE /* Assets.xcassets in Resources */,
+				F1D6A0A82B4DEC19009418F1 /* Data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1BCEE472B4D55540020D3FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1BCEE522B4D55560020D3FF /* Assets.xcassets in Resources */,
+				F1D6A0A92B4DEC19009418F1 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +409,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1654E9C2B4D4AF0002964BE /* ContentView.swift in Sources */,
+				F1BCEE432B4D52110020D3FF /* DateUtils.swift in Sources */,
+				F1D6A0A22B4DEB95009418F1 /* ApiConnector.swift in Sources */,
+				F1BCEE362B4D518F0020D3FF /* DayModel.swift in Sources */,
+				F10387722B4D75E000B2E807 /* LecturesViewModel.swift in Sources */,
+				F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */,
+				F1BCEE342B4D518F0020D3FF /* LectureModel.swift in Sources */,
 				F1654E9A2B4D4AF0002964BE /* LiturgnikApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1654EA72B4D4B6A002964BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1654EB32B4D4B6B002964BE /* ColorWidgetBundle.swift in Sources */,
+				F1BCEE372B4D518F0020D3FF /* DayModel.swift in Sources */,
+				F1D6A0A32B4DEB95009418F1 /* ApiConnector.swift in Sources */,
+				F1654EC62B4D4BDF002964BE /* NiedzielaScraper.swift in Sources */,
+				F1BCEE3D2B4D51E60020D3FF /* ColorWidget.swift in Sources */,
+				F1BCEE442B4D52110020D3FF /* DateUtils.swift in Sources */,
+				F1BCEE352B4D518F0020D3FF /* LectureModel.swift in Sources */,
+				F1BCEE3B2B4D51D70020D3FF /* Provider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1BCEE452B4D55540020D3FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1BCEE502B4D55540020D3FF /* LecturesWidget.swift in Sources */,
+				F1BCEE5C2B4D55650020D3FF /* DayModel.swift in Sources */,
+				F1D6A0A42B4DEB95009418F1 /* ApiConnector.swift in Sources */,
+				F1BCEE5A2B4D555E0020D3FF /* NiedzielaScraper.swift in Sources */,
+				F1BCEE5B2B4D55620020D3FF /* LectureModel.swift in Sources */,
+				F103876F2B4D5DA200B2E807 /* DateUtils.swift in Sources */,
+				F1BCEE5E2B4D557F0020D3FF /* Provider.swift in Sources */,
+				F1BCEE4E2B4D55540020D3FF /* LecturesWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F1654EBA2B4D4B6F002964BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */;
+			targetProxy = F1654EB92B4D4B6F002964BE /* PBXContainerItemProxy */;
+		};
+		F1BCEE552B4D55560020D3FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */;
+			targetProxy = F1BCEE542B4D55560020D3FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F1654EA22B4D4AF1002964BE /* Debug */ = {
@@ -267,14 +587,18 @@
 		F1654EA52B4D4AF1002964BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Liturgnik/Preview Content\"";
 				DEVELOPMENT_TEAM = 953L4WCQ6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Liturgnik;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,14 +620,18 @@
 		F1654EA62B4D4AF1002964BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Liturgnik/Preview Content\"";
 				DEVELOPMENT_TEAM = 953L4WCQ6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Liturgnik;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +644,114 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F1654EBD2B4D4B6F002964BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ColorWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.ColorWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1654EBE2B4D4B6F002964BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ColorWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.ColorWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F1BCEE582B4D55560020D3FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LecturesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LecturesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.LecturesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1BCEE592B4D55560020D3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LecturesWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LecturesWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.LecturesWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +779,54 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F1654EBC2B4D4B6F002964BE /* Build configuration list for PBXNativeTarget "ColorWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1654EBD2B4D4B6F002964BE /* Debug */,
+				F1654EBE2B4D4B6F002964BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1BCEE572B4D55560020D3FF /* Build configuration list for PBXNativeTarget "LecturesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1BCEE582B4D55560020D3FF /* Debug */,
+				F1BCEE592B4D55560020D3FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1654EC82B4D4BF8002964BE /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		F1BCEE382B4D51AA0020D3FF /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		F1BCEE5F2B4D560B0020D3FF /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1654E8E2B4D4AF0002964BE /* Project object */;
 }

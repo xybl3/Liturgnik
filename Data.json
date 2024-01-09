@@ -1,0 +1,14 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "title": "Test title",
+            "content": "Test content"
+        }
+    ],
+    "events": [
+        {
+            "id": 1
+        }
+    ]
+}

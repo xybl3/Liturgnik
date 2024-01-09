@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Liturgnik.xcscheme_^#shared#^_</key>
+		<key>ColorWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>LecturesWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Liturgnik.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F1654E952B4D4AF0002964BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1654EAA2B4D4B6A002964BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1BCEE482B4D55540020D3FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
