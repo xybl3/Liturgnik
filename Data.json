@@ -13,7 +13,7 @@
     ],
     "mszal": [
         {
-            "id": 1.
+            "id": 1,
             "dateFrom": "2024-01-10",
             "dateTo": "2024-01-12",
             "formularz": "222*",
@@ -21,7 +21,7 @@
             "modlitwa": "II Modlitwa Eucharystyczna"
         },
         {
-            "id": 2.
+            "id": 2,
             "dateFrom": "2024-01-12",
             "dateTo": "2024-01-14",
             "formularz": "212*",
