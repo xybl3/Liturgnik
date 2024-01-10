@@ -10,5 +10,23 @@
         {
             "id": 1
         }
+    ],
+    "mszal": [
+        {
+            "id": 1.
+            "dateFrom": "2024-01-10",
+            "dateTo": "2024-01-12",
+            "formularz": "222*",
+            "prefacja": ["1", "2", "40"],
+            "modlitwa": "II Modlitwa Eucharystyczna"
+        },
+        {
+            "id": 2.
+            "dateFrom": "2024-01-12",
+            "dateTo": "2024-01-14",
+            "formularz": "212*",
+            "prefacja": ["4", "3", "2"],
+            "modlitwa": "III Modlitwa Eucharystyczna"
+        },
     ]
 }

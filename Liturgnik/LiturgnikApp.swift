@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct LiturgnikApp: App {
+    
+    init(){
+        Task {
+           await ApiConnector.shared.fetchData()
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
