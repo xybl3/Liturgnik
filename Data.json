@@ -16,9 +16,18 @@
             "id": 1,
             "dateFrom": "2024-01-10",
             "dateTo": "2024-01-12",
-            "formularz": "222*",
+            "formularz": "30",
             "prefacja": ["1", "2", "40"],
-            "modlitwa": "II Modlitwa Eucharystyczna"
+            "modlitwa": "II Modlitwa Eucharystyczna",
+            "wyjatki": [
+                {
+                    "id": 1,
+                    "date": "2024-01-11",
+                    "formularz": "30",
+                    "prefacja": ["1", "2", "40"],
+                    "modlitwa": "II Modlitwa Eucharystyczna",
+                }
+            ]
         }
     ]
 }
