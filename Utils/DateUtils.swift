@@ -18,4 +18,15 @@ class DateUtils {
         return dateFormatter.string(from: date)
     }
 
+    static func dateFromString(from date: String) -> Date?{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from: date)
+    }
+    static func isWithinRange(targetDate: Date, startDate: Date, endDate: Date) -> Bool {
+        let startOfDay = Calendar.current.startOfDay(for: startDate)
+        let endOfDay = Calendar.current.date(bySettingHour: 23, minute: 59, second: 59, of: endDate) ?? endDate
+        
+        return targetDate >= startOfDay && targetDate <= endOfDay
+    }
 }

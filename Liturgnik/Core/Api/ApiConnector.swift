@@ -21,7 +21,15 @@ struct Mszal: Codable {
     let id: Int
     let dateFrom: String
     let dateTo: String
-    let formulatrz: String
+    let formularz: String
+    let prefacja: [String]
+    let modlitwa: String
+    let wyjatki: [Wyjatek]?
+}
+
+struct Wyjatek: Codable {
+    let id: Int
+    let formularz: String
     let prefacja: [String]
     let modlitwa: String
 }
@@ -36,7 +44,13 @@ struct DataModel: Codable {
 class ApiConnector{
     static let shared = ApiConnector()
     
+    private var fileData: DataModel? = nil
+    
     private let apiUrl: String = "https://raw.githubusercontent.com/xybl3/Liturgnik/main/Data.json";
+    
+    init() {
+        print("🚀 Initializing ApiConnector")
+    }
     
     func fetchData() async -> Void {
         guard let url = URL(string: apiUrl) else { return }
@@ -45,13 +59,18 @@ class ApiConnector{
             let (data, _) = try await URLSession.shared.data(from: url)
             let decodedData = try JSONDecoder().decode(DataModel.self, from: data)
             
-            print("decoded data: \(decodedData)")
+//            print("decoded data: \(decodedData)")
+            print("📖 Recived data from api")
+            
+            fileData = decodedData
             
         } catch {
             print("error \(error)")
         }
-        
     }
     
-//    private var
+    func getMszal() -> [Mszal]? {
+        
+        return fileData?.mszal
+    }
 }

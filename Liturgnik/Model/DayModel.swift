@@ -14,7 +14,7 @@ enum VestmentColor: String {
     case purple = "Fioletowy"
     case pink = "Różowy"
     case green = "Zielony"
-    case other
+    case other = "Brak informacji"
     
 //    static fromString(inputStr: String){
 //        switch inputStr {

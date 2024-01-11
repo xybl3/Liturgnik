@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		F103876F2B4D5DA200B2E807 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
 		F10387722B4D75E000B2E807 /* LecturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10387712B4D75E000B2E807 /* LecturesViewModel.swift */; };
+		F120D1652B5013200009F5BB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */; };
+		F120D1662B5013200009F5BB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */; };
+		F120D1692B5013200009F5BB /* MszalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */; };
+		F120D16B2B5013200009F5BB /* MszalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D16A2B5013200009F5BB /* MszalWidget.swift */; };
+		F120D16D2B5013220009F5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F120D16C2B5013220009F5BB /* Assets.xcassets */; };
+		F120D1712B5013220009F5BB /* MszalWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F120D1752B50132B0009F5BB /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
+		F120D1782B50137E0009F5BB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D1772B50137E0009F5BB /* Provider.swift */; };
+		F120D17B2B5016570009F5BB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
+		F120D17C2B501BA30009F5BB /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
+		F120D17D2B501C070009F5BB /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
+		F120D17E2B501C0A0009F5BB /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
+		F120D1802B501C1B0009F5BB /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F120D17F2B501C1B0009F5BB /* SwiftSoup */; };
 		F1654E9A2B4D4AF0002964BE /* LiturgnikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */; };
 		F1654E9C2B4D4AF0002964BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E9B2B4D4AF0002964BE /* ContentView.swift */; };
 		F1654E9E2B4D4AF1002964BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1654E9D2B4D4AF1002964BE /* Assets.xcassets */; };
@@ -50,6 +63,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F120D16F2B5013220009F5BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F120D1632B5013200009F5BB;
+			remoteInfo = MszalWidgetExtension;
+		};
 		F1654EB92B4D4B6F002964BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
@@ -74,6 +94,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				F1654EBB2B4D4B6F002964BE /* ColorWidgetExtension.appex in Embed Foundation Extensions */,
+				F120D1712B5013220009F5BB /* MszalWidgetExtension.appex in Embed Foundation Extensions */,
 				F1BCEE562B4D55560020D3FF /* LecturesWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -83,6 +104,12 @@
 
 /* Begin PBXFileReference section */
 		F10387712B4D75E000B2E807 /* LecturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewModel.swift; sourceTree = "<group>"; };
+		F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MszalWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidgetBundle.swift; sourceTree = "<group>"; };
+		F120D16A2B5013200009F5BB /* MszalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidget.swift; sourceTree = "<group>"; };
+		F120D16C2B5013220009F5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F120D16E2B5013220009F5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F120D1772B50137E0009F5BB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F1654E962B4D4AF0002964BE /* Liturgnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liturgnik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgnikApp.swift; sourceTree = "<group>"; };
 		F1654E9B2B4D4AF0002964BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +138,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F120D1612B5013200009F5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F120D1662B5013200009F5BB /* SwiftUI.framework in Frameworks */,
+				F120D1652B5013200009F5BB /* WidgetKit.framework in Frameworks */,
+				F120D1802B501C1B0009F5BB /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1654E932B4D4AF0002964BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +187,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F120D1672B5013200009F5BB /* MszalWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */,
+				F120D16A2B5013200009F5BB /* MszalWidget.swift */,
+				F120D1772B50137E0009F5BB /* Provider.swift */,
+				F120D16C2B5013220009F5BB /* Assets.xcassets */,
+				F120D16E2B5013220009F5BB /* Info.plist */,
+			);
+			path = MszalWidget;
+			sourceTree = "<group>";
+		};
 		F1654E8D2B4D4AF0002964BE = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +207,7 @@
 				F1654EB12B4D4B6B002964BE /* ColorWidget */,
 				F1BCEE412B4D520B0020D3FF /* Utils */,
 				F1BCEE4C2B4D55540020D3FF /* LecturesWidget */,
+				F120D1672B5013200009F5BB /* MszalWidget */,
 				F1654EAC2B4D4B6B002964BE /* Frameworks */,
 				F1654E972B4D4AF0002964BE /* Products */,
 			);
@@ -169,6 +219,7 @@
 				F1654E962B4D4AF0002964BE /* Liturgnik.app */,
 				F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */,
 				F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */,
+				F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +316,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F120D1632B5013200009F5BB /* MszalWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F120D1742B5013220009F5BB /* Build configuration list for PBXNativeTarget "MszalWidgetExtension" */;
+			buildPhases = (
+				F120D1602B5013200009F5BB /* Sources */,
+				F120D1612B5013200009F5BB /* Frameworks */,
+				F120D1622B5013200009F5BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MszalWidgetExtension;
+			packageProductDependencies = (
+				F120D17F2B501C1B0009F5BB /* SwiftSoup */,
+			);
+			productName = MszalWidgetExtension;
+			productReference = F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F1654E952B4D4AF0002964BE /* Liturgnik */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1654EA42B4D4AF1002964BE /* Build configuration list for PBXNativeTarget "Liturgnik" */;
@@ -279,6 +350,7 @@
 			dependencies = (
 				F1654EBA2B4D4B6F002964BE /* PBXTargetDependency */,
 				F1BCEE552B4D55560020D3FF /* PBXTargetDependency */,
+				F120D1702B5013220009F5BB /* PBXTargetDependency */,
 			);
 			name = Liturgnik;
 			packageProductDependencies = (
@@ -338,6 +410,9 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					F120D1632B5013200009F5BB = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					F1654E952B4D4AF0002964BE = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -368,11 +443,20 @@
 				F1654E952B4D4AF0002964BE /* Liturgnik */,
 				F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */,
 				F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */,
+				F120D1632B5013200009F5BB /* MszalWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F120D1622B5013200009F5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F120D16D2B5013220009F5BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1654E942B4D4AF0002964BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +488,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F120D1602B5013200009F5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F120D1692B5013200009F5BB /* MszalWidgetBundle.swift in Sources */,
+				F120D1752B50132B0009F5BB /* ApiConnector.swift in Sources */,
+				F120D17E2B501C0A0009F5BB /* LectureModel.swift in Sources */,
+				F120D17D2B501C070009F5BB /* DayModel.swift in Sources */,
+				F120D17B2B5016570009F5BB /* DateUtils.swift in Sources */,
+				F120D1782B50137E0009F5BB /* Provider.swift in Sources */,
+				F120D17C2B501BA30009F5BB /* NiedzielaScraper.swift in Sources */,
+				F120D16B2B5013200009F5BB /* MszalWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1654E922B4D4AF0002964BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +551,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F120D1702B5013220009F5BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F120D1632B5013200009F5BB /* MszalWidgetExtension */;
+			targetProxy = F120D16F2B5013220009F5BB /* PBXContainerItemProxy */;
+		};
 		F1654EBA2B4D4B6F002964BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */;
@@ -465,6 +569,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F120D1722B5013220009F5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MszalWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MszalWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.MszalWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F120D1732B5013220009F5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MszalWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MszalWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.Liturgnik.MszalWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F1654EA22B4D4AF1002964BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -761,6 +919,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F120D1742B5013220009F5BB /* Build configuration list for PBXNativeTarget "MszalWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F120D1722B5013220009F5BB /* Debug */,
+				F120D1732B5013220009F5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1654E912B4D4AF0002964BE /* Build configuration list for PBXProject "Liturgnik" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -811,6 +978,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F120D17F2B501C1B0009F5BB /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
 		F1654EC82B4D4BF8002964BE /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
