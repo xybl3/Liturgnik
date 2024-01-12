@@ -216,7 +216,7 @@ class NiedzielaScraper: ObservableObject {
         case "zielony":
             return .success(.green)
         case _:
-            return .success(.other)
+            return .success(.other(try doc.text()))
         }
         
     }

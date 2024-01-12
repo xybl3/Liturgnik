@@ -11,14 +11,12 @@ class LecturesViewModel: ObservableObject {
     @Published var lectures: [Any] = []
     @Published var date: Date = .now
     @Published var occasion = ""
-    @Published var vestmentColor: VestmentColor = .other
+    @Published var vestmentColor: VestmentColor = .other("Brak danych")
     @Published var mszal: Mszal? = nil
     
     @Published var isLoading: Bool = true
     
-    
-    
-    
+    @Published var isError: Bool = false
     
     func fetchDay(){
         Task {
@@ -28,32 +26,40 @@ class LecturesViewModel: ObservableObject {
                 }
             }
             NiedzielaScraper.shared.setDate(to:date)
-            try? await NiedzielaScraper.shared.performScrape()
-            let le = try? NiedzielaScraper.shared.getLectures().get()
-            let oc = try? NiedzielaScraper.shared.getDayOccasion().get()
-            let ve = try? NiedzielaScraper.shared.getVestmentColor().get()
-            
-            let msz = ApiConnector.shared.getMszal()?.first(where: { m in
-                if let dateFrom = DateUtils.dateFromString(from: m.dateFrom){
-                    if let dateTo = DateUtils.dateFromString(from: m.dateTo) {
-                        
-//                        print("Date \(self.date.description) is \(isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo))")
-                        
-                        return DateUtils.isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo)
+            do {
+                try await NiedzielaScraper.shared.performScrape()
+                let le = try NiedzielaScraper.shared.getLectures().get()
+                let oc = try NiedzielaScraper.shared.getDayOccasion().get()
+                let ve = try NiedzielaScraper.shared.getVestmentColor().get()
+                let msz = ApiConnector.shared.getMszal()?.first(where: { m in
+                    if let dateFrom = DateUtils.dateFromString(from: m.dateFrom){
+                        if let dateTo = DateUtils.dateFromString(from: m.dateTo) {
+                            
+                            //                        print("Date \(self.date.description) is \(isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo))")
+                            
+                            return DateUtils.isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo)
+                        }
+                    }
+                    return false
+                })
+                
+                
+                await MainActor.run {
+                    lectures = le
+                    occasion = oc
+                    vestmentColor = ve 
+                    mszal = msz
+                    withAnimation{
+                        isLoading = false
                     }
                 }
-                return false
-            })
-            
-            await MainActor.run {
-                lectures = le ?? []
-                occasion = oc ?? "Brak informacji"
-                vestmentColor = ve ?? .other
-                mszal = msz
-                withAnimation{
-                    isLoading = false
-                }
+            } catch {
+                isError = true
             }
+            
+            
+            
+            
             
         }
     }

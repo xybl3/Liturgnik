@@ -8,13 +8,24 @@
 import Foundation
 
 
-enum VestmentColor: String {
-    case red = "Czerwony"
-    case white = "Biały"
-    case purple = "Fioletowy"
-    case pink = "Różowy"
-    case green = "Zielony"
-    case other = "Brak informacji"
+enum VestmentColor {
+    case red
+    case white
+    case purple
+    case pink
+    case green
+    case other(String)
+    
+    func toString()->String{
+        switch(self){
+        case .green: return "Zielony"
+        case .pink: return "Różowy"
+        case .purple: return "Fioletowy"
+        case .white: return "Bialy"
+        case .red: return "Czerwony"
+        case .other(let other): return other
+        }
+    }
     
 //    static fromString(inputStr: String){
 //        switch inputStr {
