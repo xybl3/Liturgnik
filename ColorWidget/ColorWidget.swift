@@ -66,7 +66,9 @@ struct ColorWidgetEntryView : View {
                 if let occasion = entry.occasion {
                     Text(occasion)
                         .font(.footnote)
-                        .minimumScaleFactor(0.1)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        
                 }
             }
             Spacer()
@@ -75,7 +77,7 @@ struct ColorWidgetEntryView : View {
                 Text("Kolor:")
                     .font(.title3)
                     .widgetAccentable()
-                Text(entry.vestmentColor.rawValue)
+                Text(entry.vestmentColor.toString())
                     .foregroundColor({
                         let textColor: Color
                         switch entry.vestmentColor {
@@ -84,8 +86,7 @@ struct ColorWidgetEntryView : View {
                         case .purple: textColor = .purple
                         case .red: textColor = .red
                         case .white: textColor = .white
-                        case .other: textColor = .black
-                        case _: textColor = .black
+                        case .other: textColor = colorScheme == .dark ? .white : .black
                         }
                         
                         if textColor == .white && self.colorScheme == .light {
@@ -116,7 +117,7 @@ struct ColorWidgetEntryView : View {
             }
             HStack {
                 Text("Kolor:")
-                Text(entry.vestmentColor.rawValue)
+                Text(entry.vestmentColor.toString())
                     .bold()
             }
         }
