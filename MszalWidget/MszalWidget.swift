@@ -28,9 +28,10 @@ struct MszalWidgetEntryView : View {
                 .widgetAccentable()
             
             if let occasion = entry.occasion {
-                Text(occasion)
-                    .font(.footnote)
-                    .minimumScaleFactor(0.1)
+                    Text(occasion)
+                        .font(.footnote)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                 Divider()
             }
             

@@ -9,7 +9,7 @@ import SwiftUI
 
 class LecturesViewModel: ObservableObject {
     @Published var lectures: [Any] = []
-    @Published var date: Date = .now
+    @Published var date: Date = Calendar.current.date(byAdding: .day, value: -2, to: .now)!
     @Published var occasion = ""
     @Published var vestmentColor: VestmentColor = .other("Brak danych")
     @Published var mszal: Mszal? = nil
@@ -19,6 +19,7 @@ class LecturesViewModel: ObservableObject {
     @Published var isError: Bool = false
     
     func fetchDay(){
+        print("🛜 Fetching data  for \(self.date.formatted())")
         Task {
             await MainActor.run {
                 withAnimation {
@@ -71,6 +72,7 @@ class LecturesViewModel: ObservableObject {
     }
     
     init() {
+        print("Initializing LecturesViewModel")
         fetchDay()
     }
 }
