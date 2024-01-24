@@ -20,15 +20,19 @@ struct InfoView: View {
         else {
             List {
                 Section {
-                    
+                    HStack {
+                        Text("Kolor: ")
+                        Spacer()
+                        Text(vm.vestmentColor.toString())
+                            .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
+                            .minimumScaleFactor(0.5)
+                    }
                     HStack {
                         VStack{
-                            VStack {
-                                Text("24")
-                                    .font(.title3)
-                                Text("stycznia")
-                                    .font(.footnote)
-                            }
+                            Text(DateUtils.formatLocalizedDate(date: vm.date).split(separator: " ")[0])
+                                .font(.title2)
+                            Text(DateUtils.formatLocalizedDate(date: vm.date).split(separator: " ")[1])
+                                .font(.footnote)
                             Text("✝︎")
                                 .font(.system(size: 50))
                                 .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
@@ -36,6 +40,7 @@ struct InfoView: View {
                         Spacer()
                         Text(vm.occasion)
                             .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
+                            .multilineTextAlignment(.trailing)
                     }
                 }
                 

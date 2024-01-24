@@ -9,13 +9,12 @@ import SwiftUI
 
 class LecturesViewModel: ObservableObject {
     @Published var lectures: [Any] = []
-    @Published var date: Date = Calendar.current.date(byAdding: .day, value: -2, to: .now)!
+    @Published var date: Date = .now //Calendar.current.date(byAdding: .day, value: -2, to: .now)!
     @Published var occasion = ""
     @Published var vestmentColor: VestmentColor = .other("Brak danych")
     @Published var mszal: Mszal? = nil
     
     @Published var isLoading: Bool = true
-    
     @Published var isError: Bool = false
     
     func fetchDay(){
@@ -24,6 +23,7 @@ class LecturesViewModel: ObservableObject {
             await MainActor.run {
                 withAnimation {
                     isLoading = true
+                    isError = false
                 }
             }
             NiedzielaScraper.shared.setDate(to:date)
@@ -37,31 +37,25 @@ class LecturesViewModel: ObservableObject {
                         if let dateTo = DateUtils.dateFromString(from: m.dateTo) {
                             
                             //                        print("Date \(self.date.description) is \(isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo))")
-                            
                             return DateUtils.isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo)
                         }
                     }
                     return false
                 })
-                
-                
                 await MainActor.run {
                     lectures = le
                     occasion = oc
-                    vestmentColor = ve 
+                    vestmentColor = ve
                     mszal = msz
                     withAnimation{
                         isLoading = false
                     }
                 }
             } catch {
-                isError = true
+                await MainActor.run {
+                    isError = true
+                }
             }
-            
-            
-            
-            
-            
         }
     }
     
@@ -72,7 +66,6 @@ class LecturesViewModel: ObservableObject {
     }
     
     init() {
-        print("Initializing LecturesViewModel")
         fetchDay()
     }
 }
