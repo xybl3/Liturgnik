@@ -15,7 +15,7 @@ struct InfoView: View {
     @State private var settingsSheetDisplayed = false
     
     var body: some View {
-        NavigationStack {
+
             if vm.isLoading {
                 ProgressView()
             }
@@ -24,9 +24,9 @@ struct InfoView: View {
             }
             else {
                 List {
-//                    Text("✝︎")
-//                        .font(.system(size: 50))
-//                        .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
+                    //                    Text("✝︎")
+                    //                        .font(.system(size: 50))
+                    //                        .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
                     Section {
                         HStack {
                             Text("Kolor: ")
@@ -63,7 +63,7 @@ struct InfoView: View {
                         
                     case _:
                         Text("Brak informacji o nakazaniu")
-                    
+                        
                         
                     }
                     
@@ -94,22 +94,17 @@ struct InfoView: View {
                     }
                     
                 }
-                .navigationTitle("Ogólne")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .topBarTrailing){
-                        Button {
-                            settingsSheetDisplayed.toggle()
-                        } label: {
-                            Image(systemName: "gear")
-                        }
+                .overlay {
+                    VStack {
+                        Spacer()
+                        DateSelector(vm: vm)
+                            .padding()
                     }
                 }
+                .sheet(isPresented: $settingsSheetDisplayed, onDismiss: {
+                    settingsSheetDisplayed = false
+                }, content: {SettingsView()})
             }
-        }
-        .sheet(isPresented: $settingsSheetDisplayed, onDismiss: {
-            settingsSheetDisplayed = false
-        }, content: {SettingsView()})
     }
 }
 

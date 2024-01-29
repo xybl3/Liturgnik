@@ -14,71 +14,80 @@ struct ContentView: View {
     @State private var isLoading: Bool = true
     
     var body: some View {
-        ZStack {
-            TabView(selection: $selection) {
-                InfoView()
-                    .environmentObject(vm)
-                    .tabItem({
-                        Image(systemName: "house")
-                        Text("Ogólne")
-                    })
-                    .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            BottomBar(vm: vm)
-                        }
-                    }
-                    .tag(0)
-                LecturesView()
-                    .environmentObject(vm)
-                    .tabItem({
-                        Image(systemName: "book")
-                        Text("Liturgia")
-                    })
-                    
-                    .tag(1)
-                    
+        NavigationStack {
+            ZStack(alignment: .bottom) {
+                TabView(selection: $selection){
+                    InfoView()
+                        .environmentObject(vm)
+                        .tabItem({
+                            Image(systemName: "house")
+                            Text("Ogólne")
+                        })
+                        .tag(0)
+                        .navigationTitle("Info")
+                    LecturesView()
+                        .environmentObject(vm)
+                        .tabItem({
+                            Image(systemName: "book")
+                            Text("Liturgia")
+                        })
+                        .tag(1)
+                        .navigationTitle("Liturgia")
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle(selection == 0 ? "Info" : "Liturgia")
+                //                .toolbar {
+                //                    ToolbarItem(placement: .bottomBar){
+                //                        DateSelector(vm: vm)
+                //                    }
+                //                }
+                
+                SplashScreenView(isShown: $isLoading)
             }
             
-            SplashScreenView(isShown: $isLoading)
+            
         }
-        
     }
 }
 
-struct BottomBar: View {
+struct DateSelector: View {
     @StateObject var vm: LecturesViewModel
     var body: some View {
-        VStack {
+        
+        HStack {
+            Button {
+                vm.setDate(to: Calendar.current.date(byAdding: .day, value: -1, to: vm.date)!)
+            } label: {
+                Image(systemName: "chevron.left")
+                    .onTapGesture {
+                        print("tap")
+                    }
+            }
+           
+            
+            Spacer()
             HStack {
-                Button {
-                    vm.setDate(to: Calendar.current.date(byAdding: .day, value: -1, to: vm.date)!)
-                } label: {
-                    Image(systemName: "chevron.left")
-                }
-                Spacer()
-                HStack {
-                    Text(DateUtils.formatLocalizedDate(date: vm.date))
-                        .overlay{ //MARK: Place the DatePicker in the overlay extension
-                            DatePicker(
-                                "",
-                                selection: $vm.date,
-                                displayedComponents: [.date]
-                            )
-                            .blendMode(.destinationOver) //MARK: use this extension to keep the clickable functionality
-                            .onChange(of: vm.date, {
-                                vm.setDate(to: vm.date)
-                                
-                            })
-                        }
-                    
-                }
+                Text(DateUtils.formatLocalizedDate(date: vm.date))
+                    .overlay{ //MARK: Place the DatePicker in the overlay extension
+                        DatePicker(
+                            "",
+                            selection: $vm.date,
+                            displayedComponents: [.date]
+                        )
+                        .blendMode(.destinationOver) //MARK: use this extension to keep the clickable functionality
+                        .onChange(of: vm.date, {
+                            vm.setDate(to: vm.date)
+                            
+                        })
+                    }
                 
-                Spacer()
-                Button {
-                    vm.setDate(to: Calendar.current.date(byAdding: .day, value: 1, to: vm.date)!)
-                } label: {
-                    Image(systemName: "chevron.right")
-                }
+            }
+            
+            Spacer()
+            Button {
+                vm.setDate(to: Calendar.current.date(byAdding: .day, value: 1, to: vm.date)!)
+            } label: {
+                Image(systemName: "chevron.right")
             }
         }
     }
