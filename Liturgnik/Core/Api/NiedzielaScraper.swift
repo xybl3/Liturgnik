@@ -15,6 +15,11 @@ enum ScrapingError: Error {
     case sigleNotFound
 }
 
+
+/// Serce scrapera.
+/// Aby móc scrapować, trzeba użyć singletona ``NiedzielaScraper`` uzywajac
+///
+/// > Warning:  Ważne aby przed wykonaniem jakiejkolwek opecacji, wykonać metodę ``performScrape()``
 class NiedzielaScraper: ObservableObject {
     
     static let shared = NiedzielaScraper()
@@ -203,21 +208,23 @@ class NiedzielaScraper: ObservableObject {
         guard let doc = try document?.select("#content > article > p.font-sans > span").first() else {
             return .failure(ScrapingError.vestmentColorError)
         }
+        //TODO: To delete if newer implementation will not work.
+//        switch(try doc.text()) {
+//        case "czerwony":
+//            return .success(.red)
+//        case "biały":
+//            return .success(.white)
+//        case "fioletowy":
+//            return .success(.purple)
+//        case "różowy":
+//            return .success(.pink)
+//        case "zielony":
+//            return .success(.green)
+//        case _:
+//            return .success(.other(try doc.text()))
+//        }
         
-        switch(try doc.text()) {
-        case "czerwony":
-            return .success(.red)
-        case "biały":
-            return .success(.white)
-        case "fioletowy":
-            return .success(.purple)
-        case "różowy":
-            return .success(.pink)
-        case "zielony":
-            return .success(.green)
-        case _:
-            return .success(.other(try doc.text()))
-        }
+        return .success(VestmentColor.fromString(inputStr: try doc.text()))
         
     }
     

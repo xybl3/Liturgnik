@@ -24,6 +24,9 @@ struct InfoView: View {
             }
             else {
                 List {
+//                    Text("✝︎")
+//                        .font(.system(size: 50))
+//                        .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
                     Section {
                         HStack {
                             Text("Kolor: ")
@@ -38,9 +41,7 @@ struct InfoView: View {
                                     .font(.title2)
                                 Text(DateUtils.formatLocalizedDate(date: vm.date).split(separator: " ")[1])
                                     .font(.footnote)
-                                Text("✝︎")
-                                    .font(.system(size: 50))
-                                    .foregroundColor(ColorUtils.getTextColorBasedOnVestureColor(for: vm.vestmentColor, in: colorScheme))
+                                
                             }
                             Spacer()
                             Text(vm.occasion)
@@ -56,7 +57,9 @@ struct InfoView: View {
                                 .foregroundStyle(.red)
                         }
                     case false:
-                        EmptyView()
+                        Section("Udział we mszy świętej"){
+                            Text("Udział nie jest nakazany")
+                        }
                         
                     case _:
                         Text("Brak informacji o nakazaniu")

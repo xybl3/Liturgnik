@@ -27,6 +27,7 @@ struct Mszal: Codable {
     let wyjatki: [Wyjatek]?
 }
 
+/// Wyjatek to wyjatek w jsonie, uzywany, kiedy jest jakieś swieto lub wspomnienie, gdzie do skruktury ``Mszal`` trzeba zmienic formularz
 struct Wyjatek: Codable {
     let id: Int
     let formularz: String
