@@ -11,37 +11,43 @@ struct ContentView: View {
     @StateObject private var vm = LecturesViewModel()
     @Environment(\.colorScheme) private var colorScheme
     @State private var selection: Int = 0
+    @State private var isLoading: Bool = true
     
     var body: some View {
-        TabView(selection: $selection) {
-            InfoView()
-                .environmentObject(vm)
-                .tabItem({
-                    Image(systemName: "info")
-                    Text("Informacje")
-                })
-                .toolbar {
-                    ToolbarItem(placement: .bottomBar, content: {toolbar})
-                }
-                .tag(0)
-            LecturesView()
-                .environmentObject(vm)
-                .tabItem({
-                    Image(systemName: "book")
-                    Text("Liturgia")
-                })
-                .toolbar {
-                    ToolbarItem(placement: .bottomBar, content: {toolbar})
-                }
-                .tag(1)
+        ZStack {
+            TabView(selection: $selection) {
+                InfoView()
+                    .environmentObject(vm)
+                    .tabItem({
+                        Image(systemName: "house")
+                        Text("Ogólne")
+                    })
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            BottomBar(vm: vm)
+                        }
+                    }
+                    .tag(0)
+                LecturesView()
+                    .environmentObject(vm)
+                    .tabItem({
+                        Image(systemName: "book")
+                        Text("Liturgia")
+                    })
+                    
+                    .tag(1)
+                    
+            }
+            
+            SplashScreenView(isShown: $isLoading)
         }
         
     }
 }
 
-extension ContentView {
-
-    var toolbar: some View{
+struct BottomBar: View {
+    @StateObject var vm: LecturesViewModel
+    var body: some View {
         VStack {
             HStack {
                 Button {
@@ -64,7 +70,7 @@ extension ContentView {
                                 
                             })
                         }
-                        
+                    
                 }
                 
                 Spacer()
@@ -77,6 +83,7 @@ extension ContentView {
         }
     }
 }
+
 
 #Preview {
     ContentView()

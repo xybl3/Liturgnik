@@ -4,7 +4,7 @@
 //
 //  Created by Olivier Marszałkowski on 07/01/2024.
 //
-import Combine
+
 import WidgetKit
 
 struct Provider: TimelineProvider {

@@ -237,4 +237,11 @@ class NiedzielaScraper: ObservableObject {
     }
     
     
+    func shouldAttend() -> Bool? {
+        guard let doc = try? document?.select("#dzien > div > div > div.col-md-9 > div > div.col-12.col-lg-7 > div > p > em") else { return nil }
+        
+        let text = try? doc.text()
+        
+        return text == "Weź udział we Mszy św."
+    }
 }

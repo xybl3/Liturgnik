@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LecturesView: View {
     @EnvironmentObject private var vm: LecturesViewModel
+    @State private var tabbarVisibility: Visibility = .visible
     var body: some View {
         NavigationStack {
             List {
@@ -23,6 +24,16 @@ struct LecturesView: View {
                                 }
                                 .navigationTitle(lecture.sigle)
                                 .navigationBarTitleDisplayMode(.inline)
+                                .onAppear {
+                                    withAnimation(.easeInOut) {
+                                        tabbarVisibility = .hidden
+                                    }
+                                }
+                                .onDisappear {
+                                    withAnimation(.easeInOut) {
+                                        tabbarVisibility = .visible
+                                    }
+                                }
                             }
                         }
                         else if let psalm = vm.lectures[index] as? Psalm{
@@ -38,6 +49,16 @@ struct LecturesView: View {
                                         
                                     }
                                 }
+                                .onAppear {
+                                    withAnimation(.easeInOut) {
+                                        tabbarVisibility = .hidden
+                                    }
+                                }
+                                .onDisappear {
+                                    withAnimation(.easeInOut) {
+                                        tabbarVisibility = .visible
+                                    }
+                                }
                                 .padding()
                                 .navigationTitle("Psalm")
                                 .navigationBarTitleDisplayMode(.inline)
@@ -48,6 +69,14 @@ struct LecturesView: View {
                 }
             }
             .navigationTitle("Liturgia")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    BottomBar(vm: vm)
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(tabbarVisibility, for: .bottomBar)
+            .toolbar(tabbarVisibility, for: .tabBar)
         }
     }
 }
