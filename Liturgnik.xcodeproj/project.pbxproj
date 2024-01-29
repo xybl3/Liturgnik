@@ -205,6 +205,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F118B2B52B684D0E001D1915 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F120D1672B5013200009F5BB /* MszalWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +270,7 @@
 		F1654E982B4D4AF0002964BE /* Liturgnik */ = {
 			isa = PBXGroup;
 			children = (
+				F118B2B52B684D0E001D1915 /* Components */,
 				F127CE612B65DA33009A9D84 /* Managers */,
 				F13E0ECC2B607E25004797D6 /* View */,
 				F10387702B4D679400B2E807 /* ViewModel */,

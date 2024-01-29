@@ -13,14 +13,14 @@ class NotificationManager {
     
     
     init() {
-//        let center = UNUserNotificationCenter.current()
+        //        let center = UNUserNotificationCenter.current()
         
-//        center.getPendingNotificationRequests { requests in
-//            for request in requests {
-//                print(request.trigger.debugDescription)
-//                print(request.content.debugDescription)
-//            }
-//        }
+        //        center.getPendingNotificationRequests { requests in
+        //            for request in requests {
+        //                print(request.trigger.debugDescription)
+        //                print(request.content.debugDescription)
+        //            }
+        //        }
     }
     
     func requestNotificationPermissions(){
@@ -66,7 +66,7 @@ class NotificationManager {
             }
         }
     }
-
+    
     func removeAllNotifications() {
         let center = UNUserNotificationCenter.current()
         
@@ -84,23 +84,12 @@ class NotificationManager {
 //
 
 extension NotificationManager {
-    fileprivate func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
-        Task {
-            do {
-                NiedzielaScraper.shared.setDate(to: .now)
-                try await NiedzielaScraper.shared.performScrape()
-                let occ = try NiedzielaScraper.shared.getDayOccasion().get()
-                
-                let content = UNMutableNotificationContent()
-                content.title = "Nowa liturgia"
-                content.body = occ
-                content.subtitle = "Sprawdz nowa liturgię na dzisiaj!"
-                
-                completion(content)
-            } catch {
-                print("Error building notification: \(error)")
-                completion(nil)
-            }
-        }
+    
+    
+    private func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
+        let content = UNMutableNotificationContent()
+        content.title = "Nowa liturgia"
+        content.subtitle = "Sprawdz nowa liturgię na dzisiaj!"
+        completion(content)
     }
 }

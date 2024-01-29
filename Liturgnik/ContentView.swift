@@ -14,8 +14,10 @@ struct ContentView: View {
     @State private var isLoading: Bool = true
     
     var body: some View {
-        NavigationStack {
-            ZStack(alignment: .bottom) {
+        
+        ZStack {
+            NavigationStack {
+                
                 TabView(selection: $selection){
                     InfoView()
                         .environmentObject(vm)
@@ -34,7 +36,7 @@ struct ContentView: View {
                         .tag(1)
                         .navigationTitle("Liturgia")
                 }
-                .navigationBarTitleDisplayMode(.inline)
+//                .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(selection == 0 ? "Info" : "Liturgia")
                 //                .toolbar {
                 //                    ToolbarItem(placement: .bottomBar){
@@ -42,9 +44,9 @@ struct ContentView: View {
                 //                    }
                 //                }
                 
-                SplashScreenView(isShown: $isLoading)
+                
             }
-            
+            SplashScreenView(isShown: $isLoading)
             
         }
     }
@@ -63,7 +65,7 @@ struct DateSelector: View {
                         print("tap")
                     }
             }
-           
+            
             
             Spacer()
             HStack {

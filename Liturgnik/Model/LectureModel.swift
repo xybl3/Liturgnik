@@ -36,6 +36,3 @@ struct Acclamation: Singable {
     var chorus: String
     var verses: [String]
 }
-
-
-typealias ReadableAndSingable = Readable & Singable
