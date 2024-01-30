@@ -47,7 +47,7 @@ class LecturesViewModel: ObservableObject {
                 case .finished:
                     self.isLoading = false
                     break
-                case .failure(let err):
+                case .failure(let _):
                     self.isLoading = false
                     self.isError = true
                 }
