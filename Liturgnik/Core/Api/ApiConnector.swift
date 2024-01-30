@@ -35,6 +35,7 @@ struct Wyjatek: Codable {
     let modlitwa: String
 }
 
+/// 
 struct DataModel: Codable {
     let messages: [Message]
     let events: [Event]

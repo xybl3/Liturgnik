@@ -77,7 +77,7 @@ struct ColorWidgetEntryView : View {
                 Text("Kolor:")
                     .font(.title3)
                     .widgetAccentable()
-                Text(entry.vestmentColor.toString())
+                Text(entry.vestmentColor.value)
                     .foregroundColor({
                         let textColor: Color
                         switch entry.vestmentColor {
@@ -117,7 +117,7 @@ struct ColorWidgetEntryView : View {
             }
             HStack {
                 Text("Kolor:")
-                Text(entry.vestmentColor.toString())
+                Text(entry.vestmentColor.value)
                     .bold()
             }
         }

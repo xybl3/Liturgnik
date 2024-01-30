@@ -1,12 +1,11 @@
 //
-//  LectureModel.swift
-//  Niedziela
+//  Lectures.swift
+//  Liturgnik
 //
-//  Created by Olivier Marszałkowski on 06/01/2024.
+//  Created by Olivier Marszałkowski on 30/01/2024.
 //
 
 import Foundation
-
 
 
 protocol Readable: Identifiable {
@@ -31,11 +30,9 @@ struct Psalm: Singable {
     let verses: [String] // List of all verses in that psalm
 }
 
+// TODO: Implement acclamation in scraper
 struct Acclamation: Singable {
     var id: Int
     var chorus: String
     var verses: [String]
 }
-
-
-typealias ReadableAndSingable = Readable & Singable

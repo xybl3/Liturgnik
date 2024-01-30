@@ -13,31 +13,26 @@ class NotificationManager {
     
     
     init() {
-//        let center = UNUserNotificationCenter.current()
+        //        let center = UNUserNotificationCenter.current()
         
-//        center.getPendingNotificationRequests { requests in
-//            for request in requests {
-//                print(request.trigger.debugDescription)
-//                print(request.content.debugDescription)
-//            }
-//        }
+        //        center.getPendingNotificationRequests { requests in
+        //            for request in requests {
+        //                print(request.trigger.debugDescription)
+        //                print(request.content.debugDescription)
+        //            }
+        //        }
     }
     
     func requestNotificationPermissions(){
         let center = UNUserNotificationCenter.current()
-        
         center.requestAuthorization(options: [.alert, .badge, .sound, .criticalAlert]) { granted, error in
-            
             if let error = error {
                 print("🔔 [NotificationManager] there was error with notification authorization: \(error.localizedDescription)")
-                
                 return
             }
-            
             if granted {
                 print("🔔 [NotificationManager] notification permission granted!")
             }
-            
         }
     }
     
@@ -45,18 +40,17 @@ class NotificationManager {
         let center = UNUserNotificationCenter.current()
         
         var date = DateComponents()
+        
         date.hour = hour
         date.minute = minutes
         date.second = 0
         
         let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-        
         buildLectureNotification { content in
             guard let content = content else {
                 print("🔔 [NotificationManager] ailed to build notification content.")
                 return
             }
-            
             center.add(.init(identifier: "dev.marszalkowski.Liturgnik.powiadomienia", content: content, trigger: notificationTrigger)) { error in
                 if let error = error {
                     print("🔔 [NotificationManager] Error scheduling notification: \(error)")
@@ -66,7 +60,7 @@ class NotificationManager {
             }
         }
     }
-
+    
     func removeAllNotifications() {
         let center = UNUserNotificationCenter.current()
         
@@ -83,24 +77,13 @@ class NotificationManager {
 //}
 //
 
-extension NotificationManager {
-    fileprivate func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
-        Task {
-            do {
-                NiedzielaScraper.shared.setDate(to: .now)
-                try await NiedzielaScraper.shared.performScrape()
-                let occ = try NiedzielaScraper.shared.getDayOccasion().get()
-                
-                let content = UNMutableNotificationContent()
-                content.title = "Nowa liturgia"
-                content.body = occ
-                content.subtitle = "Sprawdz nowa liturgię na dzisiaj!"
-                
-                completion(content)
-            } catch {
-                print("Error building notification: \(error)")
-                completion(nil)
-            }
-        }
+fileprivate extension NotificationManager {
+    func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Nowa liturgia"
+        //                content.body = occ
+        content.subtitle = "Sprawdz nowa liturgię na dzisiaj!"
+        completion(content)
     }
 }
