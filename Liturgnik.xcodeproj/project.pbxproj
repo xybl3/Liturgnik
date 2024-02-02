@@ -22,7 +22,8 @@
 		F118B2CA2B68E6F7001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
 		F118B2CB2B68E6F7001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
 		F118B2CE2B68EE5E001D1915 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2CD2B68EE5E001D1915 /* HomeView.swift */; };
-		F118B2D02B68EFA8001D1915 /* LecturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2CF2B68EFA8001D1915 /* LecturesView.swift */; };
+		F118B2D02B68EFA8001D1915 /* LiturgyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */; };
+		F118B2D32B68FE82001D1915 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2D22B68FE82001D1915 /* CustomTabView.swift */; };
 		F120D1652B5013200009F5BB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */; };
 		F120D1662B5013200009F5BB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */; };
 		F120D1692B5013200009F5BB /* MszalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */; };
@@ -72,6 +73,8 @@
 		F1D6A0A72B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
 		F1D6A0A82B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
 		F1D6A0A92B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
+		F1EE13242B6C1990008B0611 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE13232B6C1990008B0611 /* SettingsView.swift */; };
+		F1EE13262B6C563A008B0611 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +123,8 @@
 		F118B2C42B68E340001D1915 /* LecturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewModel.swift; sourceTree = "<group>"; };
 		F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLoadingError.swift; sourceTree = "<group>"; };
 		F118B2CD2B68EE5E001D1915 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F118B2CF2B68EFA8001D1915 /* LecturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesView.swift; sourceTree = "<group>"; };
+		F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgyView.swift; sourceTree = "<group>"; };
+		F118B2D22B68FE82001D1915 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MszalWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidgetBundle.swift; sourceTree = "<group>"; };
 		F120D16A2B5013200009F5BB /* MszalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidget.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		F1BCEE5D2B4D557F0020D3FF /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
 		F1D6A0A62B4DEC19009418F1 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		F1EE13232B6C1990008B0611 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				F118B2C42B68E340001D1915 /* LecturesViewModel.swift */,
+				F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,9 +233,18 @@
 			isa = PBXGroup;
 			children = (
 				F118B2CD2B68EE5E001D1915 /* HomeView.swift */,
-				F118B2CF2B68EFA8001D1915 /* LecturesView.swift */,
+				F1EE13232B6C1990008B0611 /* SettingsView.swift */,
+				F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F118B2D12B68FE3B001D1915 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F118B2D22B68FE82001D1915 /* CustomTabView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F120D1672B5013200009F5BB /* MszalWidget */ = {
@@ -279,6 +295,7 @@
 		F1654E982B4D4AF0002964BE /* Liturgnik */ = {
 			isa = PBXGroup;
 			children = (
+				F118B2D12B68FE3B001D1915 /* Components */,
 				F118B2C62B68E6D7001D1915 /* Errors */,
 				F118B2CC2B68EE38001D1915 /* View */,
 				F118B2C32B68E1AF001D1915 /* ViewModel */,
@@ -562,13 +579,16 @@
 				F118B2CE2B68EE5E001D1915 /* HomeView.swift in Sources */,
 				F1BCEE432B4D52110020D3FF /* DateUtils.swift in Sources */,
 				F118B2BA2B68DFF6001D1915 /* Liturgy.swift in Sources */,
-				F118B2D02B68EFA8001D1915 /* LecturesView.swift in Sources */,
+				F118B2D02B68EFA8001D1915 /* LiturgyView.swift in Sources */,
 				F1D6A0A22B4DEB95009418F1 /* ApiConnector.swift in Sources */,
 				F118B2BF2B68E125001D1915 /* Lectures.swift in Sources */,
+				F1EE13262B6C563A008B0611 /* SettingsViewModel.swift in Sources */,
 				F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */,
+				F1EE13242B6C1990008B0611 /* SettingsView.swift in Sources */,
 				F127CE632B65DA52009A9D84 /* NotificationManager.swift in Sources */,
 				F118B2C52B68E340001D1915 /* LecturesViewModel.swift in Sources */,
 				F13E0ED22B608167004797D6 /* ColorUtils.swift in Sources */,
+				F118B2D32B68FE82001D1915 /* CustomTabView.swift in Sources */,
 				F1654E9A2B4D4AF0002964BE /* LiturgnikApp.swift in Sources */,
 				F15DE1912B658ADA003CD8B2 /* SplashScreenView.swift in Sources */,
 			);

@@ -48,6 +48,7 @@ class ApiConnector{
     
     private var fileData: DataModel? = nil
     
+//    private let apiUrl: String = "https://raw.githubusercontent.com/xybl3/Liturgnik/ui-logic-rewrite/Data.json";
     private let apiUrl: String = "https://raw.githubusercontent.com/xybl3/Liturgnik/main/Data.json";
     
     init() {

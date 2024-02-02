@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct CustomTabView: View {
+    @Binding var selection: Int
+    var content: [Any]
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    CustomTabView()
+    CustomTabView(selection: .constant(1), content: [
+    Text("Test"), Text("S")])
 }

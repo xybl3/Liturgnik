@@ -9,7 +9,7 @@ import WidgetKit
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> WidgetEntry {
-        WidgetEntry(date: Date(), family: context.family, today: .init(date: Date(), vestmentColor: .purple, occasion: nil), tomorrow: nil, liturgyYear: "B")
+        WidgetEntry(date: Date(), family: context.family, today: .init(date: Date(), vestmentColor: .purple, occasion: nil, shouldAttend: false), tomorrow: nil, liturgyYear: "B")
     }
     
     func getSnapshot(in context: Context, completion: @escaping (WidgetEntry) -> ()) {
@@ -18,11 +18,11 @@ struct Provider: TimelineProvider {
             family: context.family,
             today: .init(
                 date: Calendar.current.date(from: .init(year: 2023, month: 12, day: 10))!,
-                vestmentColor: .purple, occasion: "II Tydzień Adwentu"),
+                vestmentColor: .purple, occasion: "II Tydzień Adwentu", shouldAttend: false),
             tomorrow: context.family == .systemSmall ? nil : .init(
                 date: Calendar.current.date(from: .init(year: 2023, month: 12, day: 11))!,
                 vestmentColor: .purple,
-                occasion: "Dzień Powszedni albo wspomnienie św. Damazego I, papieża"), liturgyYear: "B")
+                occasion: "Dzień Powszedni albo wspomnienie św. Damazego I, papieża", shouldAttend: false), liturgyYear: "B")
         completion(entry)
     }
     
@@ -30,6 +30,9 @@ struct Provider: TimelineProvider {
     
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetEntry>) -> ()) {
+        
+        // TODO: Rewrite to safe code!!!!!!
+        
         Task {
             do {
                 let currentDate = Date()
@@ -39,6 +42,7 @@ struct Provider: TimelineProvider {
                 
                 let vestment = try NiedzielaScraper.shared.getVestmentColor().get()
                 let occasion = try NiedzielaScraper.shared.getDayOccasion().get()
+                let shouldAttend1 = NiedzielaScraper.shared.shouldAttend()
                 
                 let tomorrowDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
                 NiedzielaScraper.shared.setDate(to: tomorrowDate)
@@ -47,12 +51,21 @@ struct Provider: TimelineProvider {
                 let vestment2 = try NiedzielaScraper.shared.getVestmentColor().get()
                 let occasion2 = try NiedzielaScraper.shared.getDayOccasion().get()
                 
+                let shouldAttend2 = NiedzielaScraper.shared.shouldAttend()
+                
                 let lirugryYear = NiedzielaScraper.shared.fetchYear()
+                
+                
+                
                 
                 
                 // The code here will execute after the asynchronous operations are done.
                 
-                let entry = WidgetEntry(date: currentDate, family: context.family, today: .init(date: currentDate, vestmentColor: vestment, occasion: occasion), tomorrow: .init(date: tomorrowDate, vestmentColor: vestment2, occasion: occasion2), liturgyYear: lirugryYear)
+                let entry = WidgetEntry(
+                    date: currentDate,
+                    family: context.family,
+                    today: .init(date: currentDate, vestmentColor: vestment, occasion: occasion, shouldAttend: shouldAttend1),
+                    tomorrow: .init(date: tomorrowDate, vestmentColor: vestment2, occasion: occasion2, shouldAttend: shouldAttend2), liturgyYear: lirugryYear)
                 
                 
                 let timeline = Timeline(entries: [entry], policy: .atEnd)

@@ -23,7 +23,7 @@ struct DayEntry {
     let date: Date
     let vestmentColor: VestmentColor
     let occasion: String?
-    
+    let shouldAttend: Bool?
 }
 
 struct ColorWidgetEntryView : View {
@@ -54,53 +54,45 @@ struct ColorWidgetEntryView : View {
     
     @ViewBuilder
     func renderTile(for entry: DayEntry, year: String?) -> some View{
-        VStack{
+        VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                if let year = year {
-                    Text("\(DateUtils.formatLocalizedDate(date: entry.date)) \(year)")
-                        .minimumScaleFactor(0.2)
-                } else {
-                    Text("\(DateUtils.formatLocalizedDate(date: entry.date))")
-                        .minimumScaleFactor(0.4)
+                HStack {
+                    Text(DateUtils.formatDayMonth(date: entry.date))
+                        .widgetAccentable()
+                    Spacer()
+                    if let shouldAttend = entry.shouldAttend {
+                        if shouldAttend {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .font(.caption)
+                                .minimumScaleFactor(0.7)
+                                .foregroundStyle(.red)
+                        }
+                    }
                 }
-                if let occasion = entry.occasion {
-                    Text(occasion)
-                        .font(.footnote)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                        
-                }
+                Text(entry.vestmentColor.value)
+                    .lineLimit(1)
+                    .font(.title2.bold())
+                    .foregroundStyle(ColorUtils.getTextColorBasedOnVestureColor(for: entry.vestmentColor, in: colorScheme))
+                    .widgetAccentable()
             }
             Spacer()
-            VStack(alignment: .trailing) {
-                
-                Text("Kolor:")
-                    .font(.title3)
-                    .widgetAccentable()
-                Text(entry.vestmentColor.value)
-                    .foregroundColor({
-                        let textColor: Color
-                        switch entry.vestmentColor {
-                        case .green: textColor = .green
-                        case .pink: textColor = .pink
-                        case .purple: textColor = .purple
-                        case .red: textColor = .red
-                        case .white: textColor = .white
-                        case .other: textColor = colorScheme == .dark ? .white : .black
-                        }
-                        
-                        if textColor == .white && self.colorScheme == .light {
-                            return .black
-                        }
-                        
-                        return textColor
-                    }())
-                    .font(.title)
-                    .minimumScaleFactor(0.3)
-                
+//            if let shouldAttend = entry.shouldAttend {
+//                if shouldAttend {
+//                    Text("Uczestnictwo nakazane")
+//                        .font(.caption)
+//                        .minimumScaleFactor(0.7)
+//                        .foregroundStyle(.red)
+//                }
+//            }
+            if let occasion = entry.occasion {
+                VStack(alignment: .leading) {
+                    Text(occasion)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
     
     @ViewBuilder
@@ -145,17 +137,17 @@ struct ColorWidget: Widget {
 }
 
 
-
-
-#Preview(as: .accessoryRectangular) {
-    ColorWidget()
-} timeline: {
-    WidgetEntry(
-        date: Date(),
-        family: .accessoryRectangular,
-        today: .init(
-            date: Calendar.current.date(from: .init(year: 2023, month: 12, day: 10))!,
-            vestmentColor: .purple, occasion: "II Tydzień Adwentu"),
-        tomorrow: nil, liturgyYear: "Rok B, II")
-}
-
+//
+//
+//#Preview(as: .accessoryRectangular) {
+//    ColorWidget()
+//} timeline: {
+//    WidgetEntry(
+//        date: Date(),
+//        family: .accessoryRectangular,
+//        today: .init(
+//            date: Calendar.current.date(from: .init(year: 2023, month: 12, day: 10))!,
+//            vestmentColor: .purple, occasion: "II Tydzień Adwentu"), shouldAttend: false,
+//        tomorrow: nil, liturgyYear: "Rok B, II")
+//}
+//

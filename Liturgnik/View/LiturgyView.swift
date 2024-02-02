@@ -1,5 +1,5 @@
 //
-//  LecturesView.swift
+//  LiturgyView.swift
 //  Liturgnik
 //
 //  Created by Olivier Marszałkowski on 30/01/2024.
@@ -16,7 +16,7 @@ struct LiturgyView: View {
             switch lecturesViewModel.loadingStatus {
             case .success:
                 List {
-                    Section("Czytania"){
+                    Section("Czytania") {
                         ForEach(lecturesViewModel.lectures.indices, id: \.self) { index in
                             if let lecture = lecturesViewModel.lectures[index] as? Lecture {
                                 NavigationLink(lecture.sigle){
@@ -31,6 +31,20 @@ struct LiturgyView: View {
                                         .navigationTitle("Psalm")
                                         .navigationBarTitleDisplayMode(.inline)
                                 }
+                            }
+                        }
+                    }
+                    if let mszal = lecturesViewModel.mszal {
+                        Section("Mszał") {
+                            HStack {
+                                Text("Formularz")
+                                Spacer()
+                                Text(mszal.formularz)
+                            }
+                            HStack {
+                                Text("Prefacja")
+                                Spacer()
+                                Text(mszal.prefacja.joined(separator: " lub "))
                             }
                         }
                     }

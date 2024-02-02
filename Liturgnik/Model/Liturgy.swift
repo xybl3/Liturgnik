@@ -32,6 +32,8 @@ enum VestmentColor {
         }
     }
     
+    
+    
     static func fromString(inputStr: String) -> Self {
         switch inputStr {
         case "czerwony":

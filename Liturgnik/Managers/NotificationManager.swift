@@ -81,9 +81,9 @@ fileprivate extension NotificationManager {
     func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
         
         let content = UNMutableNotificationContent()
-        content.title = "Nowa liturgia"
+        content.title = "Liturgia"
         //                content.body = occ
-        content.subtitle = "Sprawdz nowa liturgię na dzisiaj!"
+        content.subtitle = "Sprawdz liturgię na dzisiaj!"
         completion(content)
     }
 }

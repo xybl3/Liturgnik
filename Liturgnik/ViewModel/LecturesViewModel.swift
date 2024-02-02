@@ -8,9 +8,15 @@
 import Foundation
 import Combine
 
+enum LoadingStatus{
+    case success
+    case loading
+    case error
+}
+
+
 class LecturesViewModel: ObservableObject {
-    @Published var isLoading = true
-    @Published var isError = false
+    @Published var loadingStatus: LoadingStatus = .loading
     @Published var selectedDate: Date = .now
     
     @Published var lectures: [Any] = []
@@ -18,10 +24,10 @@ class LecturesViewModel: ObservableObject {
     @Published var vestmentColor: VestmentColor = .other("Brak danych")
     @Published var mszal: Mszal? = nil
     @Published var shouldAttend: Bool? = nil
-        
-    let scraper = NiedzielaScraper.shared
+    
+    private let scraper = NiedzielaScraper.shared
     private var cancellables = Set<AnyCancellable>()
-
+    
     
     init(){
         print("🚀 [LecturesVM] Initialize VM")
@@ -35,6 +41,7 @@ class LecturesViewModel: ObservableObject {
     }
     
     func changeDate(to date: Date){
+        self.loadingStatus = .loading
         self.selectedDate = date
         self.fetchLectures()
     }
@@ -45,11 +52,10 @@ class LecturesViewModel: ObservableObject {
             .sink { completion in
                 switch completion {
                 case .finished:
-                    self.isLoading = false
+                    self.loadingStatus = .success
                     break
-                case .failure(let _):
-                    self.isLoading = false
-                    self.isError = true
+                case .failure(_):
+                    self.loadingStatus = .error
                 }
             } receiveValue: { (lectures: [Any], occasion: String, vestmentColor: VestmentColor, mszal: Mszal?, shouldAttend: Bool?) in
                 self.lectures = lectures
@@ -59,7 +65,7 @@ class LecturesViewModel: ObservableObject {
                 self.shouldAttend = shouldAttend
             }
             .store(in: &cancellables)
-
+        
     }
     
     
@@ -88,17 +94,17 @@ class LecturesViewModel: ObservableObject {
                     }
                     
                     let mszal = ApiConnector.shared.getMszal()?.first(where: { m in
-                                            if let dateFrom = DateUtils.dateFromString(from: m.dateFrom),
-                                               let dateTo = DateUtils.dateFromString(from: m.dateTo) {
-                                                return DateUtils.isWithinRange(targetDate: self.selectedDate, startDate: dateFrom, endDate: dateTo)
-                                            }
-                                            return false
-                                        })
-
+                        if let dateFrom = DateUtils.dateFromString(from: m.dateFrom),
+                           let dateTo = DateUtils.dateFromString(from: m.dateTo) {
+                            return DateUtils.isWithinRange(targetDate: self.selectedDate, startDate: dateFrom, endDate: dateTo)
+                        }
+                        return false
+                    })
+                    
                     let shouldAttend = self.scraper.shouldAttend()
                     promise(.success((lec, occ, vestmentColor, mszal, shouldAttend)))
-                  
-
+                    
+                    
                 }
                 catch {
                     promise(.failure(error))
