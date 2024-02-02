@@ -17,6 +17,13 @@ class DateUtils {
         
         return dateFormatter.string(from: date)
     }
+    
+    static func formatDayMonth(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMMM"
+        dateFormatter.locale = Locale(identifier: "pl")
+        return dateFormatter.string(from: date)
+    }
 
     static func dateFromString(from date: String) -> Date?{
         let dateFormatter = DateFormatter()

@@ -10,13 +10,12 @@ import SwiftSoup
 
 enum ScrapingError: Error {
     case lectureCountZero
-    case cannotGetDayOccasion(message: String)
+    case cannotGetDayOccasion
     case vestmentColorError
     case sigleNotFound
 }
 
 
-/// Serce scrapera.
 /// Aby móc scrapować, trzeba użyć singletona ``NiedzielaScraper`` uzywajac
 ///
 /// > Warning:  Ważne aby przed wykonaniem jakiejkolwek opecacji, wykonać metodę ``performScrape()``
@@ -188,44 +187,44 @@ class NiedzielaScraper: ObservableObject {
     }
     
     
-    func getDayOccasion() throws -> Result<String, Error> {
-        guard let doc = try document?.select("#content > article > p.font-serif.fw-bold > em").first() else {
-            //TODO: Handle that to be error prefferably
-            return .success("Can not read 1")
+    func getDayOccasion() -> Result<String, Error> {
+        do {
+            guard let doc = try document?.select("#content > article > p.font-serif.fw-bold > em").first() else {
+                return .failure(ScrapingError.cannotGetDayOccasion)
+            }
+            return .success(try doc.text())
+        } catch {
+            return .failure(ScrapingError.cannotGetDayOccasion)
         }
-        
-        
-        return .success(try doc.text())
-        
-        
-        
-        //        TODO: Halso handle that, when it can not read that.
-        //        return .success("Can not read 2")
     }
     
     
-    func getVestmentColor() throws -> Result<VestmentColor, Error> {
-        guard let doc = try document?.select("#content > article > p.font-sans > span").first() else {
+    func getVestmentColor() -> Result<VestmentColor, Error> {
+        do {
+            guard let doc = try document?.select("#content > article > p.font-sans > span").first() else {
+                return .failure(ScrapingError.vestmentColorError)
+            }
+            //TODO: To delete if newer implementation will not work.
+    //        switch(try doc.text()) {
+    //        case "czerwony":
+    //            return .success(.red)
+    //        case "biały":
+    //            return .success(.white)
+    //        case "fioletowy":
+    //            return .success(.purple)
+    //        case "różowy":
+    //            return .success(.pink)
+    //        case "zielony":
+    //            return .success(.green)
+    //        case _:
+    //            return .success(.other(try doc.text()))
+    //        }
+            
+            return .success(VestmentColor.fromString(inputStr: try doc.text()))
+        }
+        catch {
             return .failure(ScrapingError.vestmentColorError)
         }
-        //TODO: To delete if newer implementation will not work.
-//        switch(try doc.text()) {
-//        case "czerwony":
-//            return .success(.red)
-//        case "biały":
-//            return .success(.white)
-//        case "fioletowy":
-//            return .success(.purple)
-//        case "różowy":
-//            return .success(.pink)
-//        case "zielony":
-//            return .success(.green)
-//        case _:
-//            return .success(.other(try doc.text()))
-//        }
-        
-        return .success(VestmentColor.fromString(inputStr: try doc.text()))
-        
     }
     
     func fetchYear() -> String? {

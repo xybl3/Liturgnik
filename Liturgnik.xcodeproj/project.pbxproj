@@ -8,7 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F103876F2B4D5DA200B2E807 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
-		F10387722B4D75E000B2E807 /* LecturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10387712B4D75E000B2E807 /* LecturesViewModel.swift */; };
+		F118B2BA2B68DFF6001D1915 /* Liturgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2B92B68DFF6001D1915 /* Liturgy.swift */; };
+		F118B2BB2B68DFF6001D1915 /* Liturgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2B92B68DFF6001D1915 /* Liturgy.swift */; };
+		F118B2BC2B68DFF6001D1915 /* Liturgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2B92B68DFF6001D1915 /* Liturgy.swift */; };
+		F118B2BD2B68DFF6001D1915 /* Liturgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2B92B68DFF6001D1915 /* Liturgy.swift */; };
+		F118B2BF2B68E125001D1915 /* Lectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2BE2B68E125001D1915 /* Lectures.swift */; };
+		F118B2C02B68E125001D1915 /* Lectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2BE2B68E125001D1915 /* Lectures.swift */; };
+		F118B2C12B68E125001D1915 /* Lectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2BE2B68E125001D1915 /* Lectures.swift */; };
+		F118B2C22B68E125001D1915 /* Lectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2BE2B68E125001D1915 /* Lectures.swift */; };
+		F118B2C52B68E340001D1915 /* LecturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C42B68E340001D1915 /* LecturesViewModel.swift */; };
+		F118B2C82B68E6F2001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
+		F118B2C92B68E6F7001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
+		F118B2CA2B68E6F7001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
+		F118B2CB2B68E6F7001D1915 /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
+		F118B2CE2B68EE5E001D1915 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2CD2B68EE5E001D1915 /* HomeView.swift */; };
+		F118B2D02B68EFA8001D1915 /* LiturgyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */; };
+		F118B2D32B68FE82001D1915 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2D22B68FE82001D1915 /* CustomTabView.swift */; };
 		F120D1652B5013200009F5BB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */; };
 		F120D1662B5013200009F5BB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */; };
 		F120D1692B5013200009F5BB /* MszalWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */; };
@@ -19,14 +34,8 @@
 		F120D1782B50137E0009F5BB /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120D1772B50137E0009F5BB /* Provider.swift */; };
 		F120D17B2B5016570009F5BB /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
 		F120D17C2B501BA30009F5BB /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
-		F120D17D2B501C070009F5BB /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
-		F120D17E2B501C0A0009F5BB /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
 		F120D1802B501C1B0009F5BB /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F120D17F2B501C1B0009F5BB /* SwiftSoup */; };
 		F127CE632B65DA52009A9D84 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127CE622B65DA52009A9D84 /* NotificationManager.swift */; };
-		F127CE652B65E8F5009A9D84 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127CE642B65E8F5009A9D84 /* SettingsView.swift */; };
-		F127CE672B65F794009A9D84 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127CE662B65F794009A9D84 /* SettingsViewModel.swift */; };
-		F13E0ECE2B607E32004797D6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ECD2B607E32004797D6 /* InfoView.swift */; };
-		F13E0ED02B607EA2004797D6 /* LecturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ECF2B607EA2004797D6 /* LecturesView.swift */; };
 		F13E0ED22B608167004797D6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ED12B608167004797D6 /* ColorUtils.swift */; };
 		F13E0ED42B60816A004797D6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ED12B608167004797D6 /* ColorUtils.swift */; };
 		F13E0ED52B60816B004797D6 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ED12B608167004797D6 /* ColorUtils.swift */; };
@@ -44,10 +53,6 @@
 		F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
 		F1654EC62B4D4BDF002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
 		F1654EC92B4D4BF8002964BE /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1654EC82B4D4BF8002964BE /* SwiftSoup */; };
-		F1BCEE342B4D518F0020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
-		F1BCEE352B4D518F0020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
-		F1BCEE362B4D518F0020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
-		F1BCEE372B4D518F0020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
 		F1BCEE392B4D51AB0020D3FF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1BCEE382B4D51AA0020D3FF /* SwiftSoup */; };
 		F1BCEE3B2B4D51D70020D3FF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3A2B4D51D70020D3FF /* Provider.swift */; };
 		F1BCEE3D2B4D51E60020D3FF /* ColorWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */; };
@@ -60,8 +65,6 @@
 		F1BCEE522B4D55560020D3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BCEE512B4D55560020D3FF /* Assets.xcassets */; };
 		F1BCEE562B4D55560020D3FF /* LecturesWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F1BCEE5A2B4D555E0020D3FF /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
-		F1BCEE5B2B4D55620020D3FF /* LectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE322B4D518F0020D3FF /* LectureModel.swift */; };
-		F1BCEE5C2B4D55650020D3FF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE332B4D518F0020D3FF /* DayModel.swift */; };
 		F1BCEE5E2B4D557F0020D3FF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE5D2B4D557F0020D3FF /* Provider.swift */; };
 		F1BCEE602B4D560B0020D3FF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1BCEE5F2B4D560B0020D3FF /* SwiftSoup */; };
 		F1D6A0A22B4DEB95009418F1 /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
@@ -70,6 +73,8 @@
 		F1D6A0A72B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
 		F1D6A0A82B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
 		F1D6A0A92B4DEC19009418F1 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D6A0A62B4DEC19009418F1 /* Data.json */; };
+		F1EE13242B6C1990008B0611 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE13232B6C1990008B0611 /* SettingsView.swift */; };
+		F1EE13262B6C563A008B0611 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +118,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F10387712B4D75E000B2E807 /* LecturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewModel.swift; sourceTree = "<group>"; };
+		F118B2B92B68DFF6001D1915 /* Liturgy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liturgy.swift; sourceTree = "<group>"; };
+		F118B2BE2B68E125001D1915 /* Lectures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lectures.swift; sourceTree = "<group>"; };
+		F118B2C42B68E340001D1915 /* LecturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewModel.swift; sourceTree = "<group>"; };
+		F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLoadingError.swift; sourceTree = "<group>"; };
+		F118B2CD2B68EE5E001D1915 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgyView.swift; sourceTree = "<group>"; };
+		F118B2D22B68FE82001D1915 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MszalWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F120D1682B5013200009F5BB /* MszalWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidgetBundle.swift; sourceTree = "<group>"; };
 		F120D16A2B5013200009F5BB /* MszalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MszalWidget.swift; sourceTree = "<group>"; };
@@ -121,10 +132,6 @@
 		F120D16E2B5013220009F5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F120D1772B50137E0009F5BB /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F127CE622B65DA52009A9D84 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		F127CE642B65E8F5009A9D84 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		F127CE662B65F794009A9D84 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		F13E0ECD2B607E32004797D6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		F13E0ECF2B607EA2004797D6 /* LecturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesView.swift; sourceTree = "<group>"; };
 		F13E0ED12B608167004797D6 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		F15DE1902B658ADA003CD8B2 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		F1654E962B4D4AF0002964BE /* Liturgnik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liturgnik.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,8 +146,6 @@
 		F1654EB62B4D4B6F002964BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1654EB82B4D4B6F002964BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiedzielaScraper.swift; sourceTree = "<group>"; };
-		F1BCEE322B4D518F0020D3FF /* LectureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureModel.swift; sourceTree = "<group>"; };
-		F1BCEE332B4D518F0020D3FF /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		F1BCEE3A2B4D51D70020D3FF /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWidget.swift; sourceTree = "<group>"; };
 		F1BCEE422B4D52110020D3FF /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
@@ -152,6 +157,8 @@
 		F1BCEE5D2B4D557F0020D3FF /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
 		F1D6A0A62B4DEC19009418F1 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		F1EE13232B6C1990008B0611 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,13 +203,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F10387702B4D679400B2E807 /* ViewModel */ = {
+		F118B2B82B68DFB4001D1915 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F10387712B4D75E000B2E807 /* LecturesViewModel.swift */,
-				F127CE662B65F794009A9D84 /* SettingsViewModel.swift */,
+				F118B2B92B68DFF6001D1915 /* Liturgy.swift */,
+				F118B2BE2B68E125001D1915 /* Lectures.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F118B2C32B68E1AF001D1915 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F118B2C42B68E340001D1915 /* LecturesViewModel.swift */,
+				F1EE13252B6C563A008B0611 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F118B2C62B68E6D7001D1915 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		F118B2CC2B68EE38001D1915 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F118B2CD2B68EE5E001D1915 /* HomeView.swift */,
+				F1EE13232B6C1990008B0611 /* SettingsView.swift */,
+				F118B2CF2B68EFA8001D1915 /* LiturgyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F118B2D12B68FE3B001D1915 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F118B2D22B68FE82001D1915 /* CustomTabView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F120D1672B5013200009F5BB /* MszalWidget */ = {
@@ -223,16 +265,6 @@
 				F127CE622B65DA52009A9D84 /* NotificationManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		F13E0ECC2B607E25004797D6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F13E0ECD2B607E32004797D6 /* InfoView.swift */,
-				F13E0ECF2B607EA2004797D6 /* LecturesView.swift */,
-				F127CE642B65E8F5009A9D84 /* SettingsView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F1654E8D2B4D4AF0002964BE = {
@@ -263,10 +295,12 @@
 		F1654E982B4D4AF0002964BE /* Liturgnik */ = {
 			isa = PBXGroup;
 			children = (
+				F118B2D12B68FE3B001D1915 /* Components */,
+				F118B2C62B68E6D7001D1915 /* Errors */,
+				F118B2CC2B68EE38001D1915 /* View */,
+				F118B2C32B68E1AF001D1915 /* ViewModel */,
+				F118B2B82B68DFB4001D1915 /* Model */,
 				F127CE612B65DA33009A9D84 /* Managers */,
-				F13E0ECC2B607E25004797D6 /* View */,
-				F10387702B4D679400B2E807 /* ViewModel */,
-				F1BCEE312B4D516A0020D3FF /* Model */,
 				F1654EC22B4D4BAA002964BE /* Core */,
 				F1654E992B4D4AF0002964BE /* LiturgnikApp.swift */,
 				F1654E9B2B4D4AF0002964BE /* ContentView.swift */,
@@ -312,15 +346,6 @@
 				F1D6A0A02B4DEB70009418F1 /* Api */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		F1BCEE312B4D516A0020D3FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F1BCEE332B4D518F0020D3FF /* DayModel.swift */,
-				F1BCEE322B4D518F0020D3FF /* LectureModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F1BCEE412B4D520B0020D3FF /* Utils */ = {
@@ -532,15 +557,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F118B2BD2B68DFF6001D1915 /* Liturgy.swift in Sources */,
 				F13E0ED52B60816B004797D6 /* ColorUtils.swift in Sources */,
 				F120D1692B5013200009F5BB /* MszalWidgetBundle.swift in Sources */,
 				F120D1752B50132B0009F5BB /* ApiConnector.swift in Sources */,
-				F120D17E2B501C0A0009F5BB /* LectureModel.swift in Sources */,
-				F120D17D2B501C070009F5BB /* DayModel.swift in Sources */,
+				F118B2CB2B68E6F7001D1915 /* DayLoadingError.swift in Sources */,
 				F120D17B2B5016570009F5BB /* DateUtils.swift in Sources */,
 				F120D1782B50137E0009F5BB /* Provider.swift in Sources */,
 				F120D17C2B501BA30009F5BB /* NiedzielaScraper.swift in Sources */,
 				F120D16B2B5013200009F5BB /* MszalWidget.swift in Sources */,
+				F118B2C22B68E125001D1915 /* Lectures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,19 +574,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F118B2C82B68E6F2001D1915 /* DayLoadingError.swift in Sources */,
 				F1654E9C2B4D4AF0002964BE /* ContentView.swift in Sources */,
+				F118B2CE2B68EE5E001D1915 /* HomeView.swift in Sources */,
 				F1BCEE432B4D52110020D3FF /* DateUtils.swift in Sources */,
+				F118B2BA2B68DFF6001D1915 /* Liturgy.swift in Sources */,
+				F118B2D02B68EFA8001D1915 /* LiturgyView.swift in Sources */,
 				F1D6A0A22B4DEB95009418F1 /* ApiConnector.swift in Sources */,
-				F1BCEE362B4D518F0020D3FF /* DayModel.swift in Sources */,
-				F10387722B4D75E000B2E807 /* LecturesViewModel.swift in Sources */,
-				F127CE672B65F794009A9D84 /* SettingsViewModel.swift in Sources */,
+				F118B2BF2B68E125001D1915 /* Lectures.swift in Sources */,
+				F1EE13262B6C563A008B0611 /* SettingsViewModel.swift in Sources */,
 				F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */,
+				F1EE13242B6C1990008B0611 /* SettingsView.swift in Sources */,
 				F127CE632B65DA52009A9D84 /* NotificationManager.swift in Sources */,
-				F127CE652B65E8F5009A9D84 /* SettingsView.swift in Sources */,
-				F1BCEE342B4D518F0020D3FF /* LectureModel.swift in Sources */,
-				F13E0ED02B607EA2004797D6 /* LecturesView.swift in Sources */,
+				F118B2C52B68E340001D1915 /* LecturesViewModel.swift in Sources */,
 				F13E0ED22B608167004797D6 /* ColorUtils.swift in Sources */,
-				F13E0ECE2B607E32004797D6 /* InfoView.swift in Sources */,
+				F118B2D32B68FE82001D1915 /* CustomTabView.swift in Sources */,
 				F1654E9A2B4D4AF0002964BE /* LiturgnikApp.swift in Sources */,
 				F15DE1912B658ADA003CD8B2 /* SplashScreenView.swift in Sources */,
 			);
@@ -570,15 +598,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F118B2BB2B68DFF6001D1915 /* Liturgy.swift in Sources */,
 				F13E0ED42B60816A004797D6 /* ColorUtils.swift in Sources */,
 				F1654EB32B4D4B6B002964BE /* ColorWidgetBundle.swift in Sources */,
-				F1BCEE372B4D518F0020D3FF /* DayModel.swift in Sources */,
 				F1D6A0A32B4DEB95009418F1 /* ApiConnector.swift in Sources */,
+				F118B2C92B68E6F7001D1915 /* DayLoadingError.swift in Sources */,
 				F1654EC62B4D4BDF002964BE /* NiedzielaScraper.swift in Sources */,
 				F1BCEE3D2B4D51E60020D3FF /* ColorWidget.swift in Sources */,
 				F1BCEE442B4D52110020D3FF /* DateUtils.swift in Sources */,
-				F1BCEE352B4D518F0020D3FF /* LectureModel.swift in Sources */,
 				F1BCEE3B2B4D51D70020D3FF /* Provider.swift in Sources */,
+				F118B2C02B68E125001D1915 /* Lectures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,15 +615,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F118B2BC2B68DFF6001D1915 /* Liturgy.swift in Sources */,
 				F13E0ED62B60816D004797D6 /* ColorUtils.swift in Sources */,
 				F1BCEE502B4D55540020D3FF /* LecturesWidget.swift in Sources */,
-				F1BCEE5C2B4D55650020D3FF /* DayModel.swift in Sources */,
 				F1D6A0A42B4DEB95009418F1 /* ApiConnector.swift in Sources */,
+				F118B2CA2B68E6F7001D1915 /* DayLoadingError.swift in Sources */,
 				F1BCEE5A2B4D555E0020D3FF /* NiedzielaScraper.swift in Sources */,
-				F1BCEE5B2B4D55620020D3FF /* LectureModel.swift in Sources */,
 				F103876F2B4D5DA200B2E807 /* DateUtils.swift in Sources */,
 				F1BCEE5E2B4D557F0020D3FF /* Provider.swift in Sources */,
 				F1BCEE4E2B4D55540020D3FF /* LecturesWidgetBundle.swift in Sources */,
+				F118B2C12B68E125001D1915 /* Lectures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
