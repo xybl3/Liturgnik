@@ -24,9 +24,7 @@ struct MszalWidgetEntryView : View {
             Text("\(DateUtils.formatLocalizedDate(date: entry.date))")
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-                .bold()
-                .widgetAccentable()
-            
+
             if let occasion = entry.occasion {
                     Text(occasion)
                         .font(.footnote)

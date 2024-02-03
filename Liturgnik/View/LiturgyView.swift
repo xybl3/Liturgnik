@@ -69,13 +69,14 @@ struct LiturgyView: View {
 
 struct LectureView: View {
     let lecture: Lecture
+
     
     var body: some View {
         ScrollView {
             Text(lecture.content)
-                .fontDesign(.monospaced)
+                .monospaced()
+                .padding()
         }
-        .padding()
     }
 }
 
@@ -86,15 +87,14 @@ struct PsalmView: View {
         ScrollView{
             ForEach(psalm.verses, id: \.self) { verse in
                 Text(verse)
-                    .fontDesign(.monospaced)
+                    .monospaced()
                 Text(psalm.chorus)
                     .fontWeight(.black)
                     .padding(.vertical)
-                    .fontDesign(.monospaced)
-                
+                    .monospaced()
             }
+            .padding()
         }
-        .padding()
     }
 }
 

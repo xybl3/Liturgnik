@@ -52,25 +52,14 @@ struct HomeView: View {
             }
         }
         .transition(.opacity)
-//        .refreshable {
-//            
-//        }
-        
         .navigationTitle("Ogólne")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 ToolbarDatePicker(lecturesViewModel: lecturesViewModel)
             }
-//            ToolbarItem(placement: .topBarLeading) {
-//                Button {
-//                    settingsSheetDisplayed.toggle()
-//                } label: {
-//                    Image(systemName: "gear")
-//                }
-//            }
         }
         .sheet(isPresented: $settingsSheetDisplayed, onDismiss: {
-          settingsSheetDisplayed = false
+            settingsSheetDisplayed = false
         }, content: { SettingsView() })
         
     }
@@ -81,31 +70,16 @@ struct ToolbarDatePicker: View {
     
     var body: some View {
         DatePicker("", selection: $lecturesViewModel.selectedDate, displayedComponents: .date)
-//            .blendMode(.overlay)
+            .environment(\.locale, Locale.init(identifier: "pl"))
             .foregroundStyle(Color.accentColor)
-        //                            .id(lecturesViewModel.selectedDate) // TODO: make that animation
-            .onChange(of: lecturesViewModel.selectedDate, {
-                withAnimation(.spring(.snappy)) {
+            .onChange(of: lecturesViewModel.selectedDate) { test in
+                withAnimation(.spring) {
                     lecturesViewModel.changeDate(to: lecturesViewModel.selectedDate)
                 }
-            })
+            }
     }
 }
-//        Text(DateUtils.formatLocalizedDate(date: lecturesViewModel.selectedDate))
-////            .foregroundStyle(Color.accentColor)
-//            .overlay {
-//                DatePicker("", selection: $lecturesViewModel.selectedDate, displayedComponents: .date)
-//                    .blendMode(.overlay)
-//                    .foregroundStyle(Color.accentColor)
-//                //                            .id(lecturesViewModel.selectedDate) // TODO: make that animation
-//                    .onChange(of: lecturesViewModel.selectedDate, {
-//                        withAnimation(.spring(.snappy)) {
-//                            lecturesViewModel.changeDate(to: lecturesViewModel.selectedDate)
-//                        }
-//                    })
-//            }
-//    }
-//}
+
 
 #Preview {
     HomeView(lecturesViewModel: LecturesViewModel())

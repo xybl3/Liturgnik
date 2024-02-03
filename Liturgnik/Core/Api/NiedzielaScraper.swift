@@ -70,7 +70,6 @@ class NiedzielaScraper: ObservableObject {
             return .failure(error)
         }
     }
-    //*[@id="content"]/article/p[1]/em
     
     func getLectures() -> Result<[Any], Error>{
         
@@ -82,6 +81,7 @@ class NiedzielaScraper: ObservableObject {
         for index in 0..<count {
             do {
                 if let lecture = try self.document?.getElementById("tabnowy0\(index)") {
+                    
                     let sigle = try lecture.children().first()?.text()
                     
                     guard let sigle = sigle else {
@@ -89,7 +89,30 @@ class NiedzielaScraper: ObservableObject {
                         return .failure(ScrapingError.lectureCountZero)
                     }
                     
-                    // T jest czytanie
+                    if sigle.starts(with: "Wersja") {
+                        
+                        let category = try lecture.children()[1].text()
+                        
+                        if category.starts(with: "Ewangelia") {
+                            
+                            let content =  String(lecture.children().map({
+                                do {
+                                    return try $0.text()
+                                }
+                                catch {
+                                    return "Nie mozna odczytac zawartości"
+                                }
+                            }).joined(separator: "\n"))
+                            
+                            
+                            /// Kiedy jest wiecej niż jedna wersja ewangelii
+                            let sigleInExceptionLecture = "Ewangelia \(try lecture.select("h2").map({try $0.text()}).joined(separator: " lub ").replacingOccurrences(of: "Ewangelia", with: ""))"
+                            
+                            lectures.append(Lecture(id: index+1, sigle: sigleInExceptionLecture, heading: "", content: content))
+                        }
+                    }
+                    
+                    // To jest czytanie
                     if sigle.starts(with: /\d\./) {
                         let id = Int(Array(arrayLiteral: sigle)[0])
                         let withoutCzytanie = sigle
@@ -104,14 +127,12 @@ class NiedzielaScraper: ObservableObject {
                         
                         do {
                             let contentElements = try lecture.select("#tabnowy0\(index) > p")
-                            
                             try contentElements.forEach { p in
                                 content.append(try p.text() + "\n")
                             }
                         } catch {
                             print(error)
                         }
-                        
                         
                         lectures.append(Lecture(id: id ?? 0, sigle: String(withoutCzytanie), heading: "", content: content))
                     }
@@ -164,19 +185,17 @@ class NiedzielaScraper: ObservableObject {
                         lectures.append(Lecture(id: index+1, sigle: rawSigle, heading: "", content: content.joined(separator: "\n")))
                         
                     }
-                    //if there is any text like
-                    /*
-                     Jeśli 25 grudnia, a tym samym 1 stycznia, przypada w niedzielę, wtedy święto zostaje przeniesione na 30 grudnia, przed Ewangelią jest tylko jedno czytanie.
-                     Wersja dłuższa
-                     */
-                    else {
-                        
-                    }
+                    // Miało byc użyte ale jednak nie było
+//                    // kiedy jest
+//                    /*
+//                     Jeśli 25 grudnia, a tym samym 1 stycznia, przypada w niedzielę, wtedy święto zostaje przeniesione na 30 grudnia, przed Ewangelią jest tylko jedno czytanie.
+//                     Wersja dłuższa
+//                     */
+//                    else {
+//                        
+//                    }
                     
-                } else {
-                    print("SOmethign fdumb")
                 }
-                
             }
             catch {
                 print(error)
@@ -198,28 +217,11 @@ class NiedzielaScraper: ObservableObject {
         }
     }
     
-    
     func getVestmentColor() -> Result<VestmentColor, Error> {
         do {
             guard let doc = try document?.select("#content > article > p.font-sans > span").first() else {
                 return .failure(ScrapingError.vestmentColorError)
             }
-            //TODO: To delete if newer implementation will not work.
-    //        switch(try doc.text()) {
-    //        case "czerwony":
-    //            return .success(.red)
-    //        case "biały":
-    //            return .success(.white)
-    //        case "fioletowy":
-    //            return .success(.purple)
-    //        case "różowy":
-    //            return .success(.pink)
-    //        case "zielony":
-    //            return .success(.green)
-    //        case _:
-    //            return .success(.other(try doc.text()))
-    //        }
-            
             return .success(VestmentColor.fromString(inputStr: try doc.text()))
         }
         catch {
@@ -236,8 +238,6 @@ class NiedzielaScraper: ObservableObject {
             .split(separator: ";")[1]
             .replacingOccurrences(of: "ROK", with: "")
             .trimmingCharacters(in: .whitespaces)
-//            .split(separator: ",")[0]
-//            .trimmingCharacters(in: .whitespaces)
         
         return text
     }
@@ -245,7 +245,7 @@ class NiedzielaScraper: ObservableObject {
     
     func shouldAttend() -> Bool? {
         guard let doc = try? document?.select("#dzien > div > div > div.col-md-9 > div > div.col-12.col-lg-7 > div > p > em") else { return nil }
-        
+
         let text = try? doc.text()
         
         return text == "Weź udział we Mszy św."

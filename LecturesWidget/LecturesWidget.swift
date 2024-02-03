@@ -27,8 +27,7 @@ struct LecturesWidgetEntryView : View {
                     .bold()
                 Spacer()
             }
-            Spacer()
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 2) {
                 ForEach(entry.lectures.indices, id: \.self) { index in
                     if let czytanie = entry.lectures[index] as? Lecture {
                         Text(czytanie.sigle)
@@ -45,6 +44,8 @@ struct LecturesWidgetEntryView : View {
                     Divider()
                 }
             }
+            .padding(.top, 1)
+            Spacer()
         }
     }
 }
@@ -69,25 +70,29 @@ struct LecturesWidget: Widget {
     }
 }
 
-#Preview(as: .systemMedium) {
-    LecturesWidget()
-} timeline: {
-    WidgetEntry(date: .now, family: .systemMedium, lectures: [
-        Lecture(id: 1, sigle: "1 Sm 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-        Psalm(id: 1, chorus: "Test test fksdkjfjkdsjfkldsklfjadksjfkjdkfjdkjfkjsdlkfjksldjf;asdjf;lasdjflskadjflkasdjflksdjfksdjfksdjlkj", verses: ["sjdjfkdsjfkjsdfkjsd"]),
-        Lecture(id: 2, sigle: "1 Kol 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-        
-        Lecture(id: 2, sigle: "Mt 3, 4-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-    ])
-}
-#Preview(as: .systemLarge) {
-    LecturesWidget()
-} timeline: {
-    WidgetEntry(date: .now, family: .systemLarge, lectures: [
-        Lecture(id: 1, sigle: "1 Sm 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-        Psalm(id: 1, chorus: "Test test fksdkjfjkdsjfkldsklfjadksjfkjdkfjdkjfkjsdlkfjksldjf;asdjf;lasdjflskadjflkasdjflksdjfksdjfksdjlkj", verses: ["sjdjfkdsjfkjsdfkjsd"]),
-        Lecture(id: 2, sigle: "1 Kol 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-        
-        Lecture(id: 2, sigle: "Mt 3, 4-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
-    ])
-}
+
+
+
+
+//#Preview(as: .systemMedium) {
+//    LecturesWidget()
+//} timeline: {
+//    WidgetEntry(date: .now, family: .systemMedium, lectures: [
+//        Lecture(id: 1, sigle: "1 Sm 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//        Psalm(id: 1, chorus: "Test test fksdkjfjkdsjfkldsklfjadksjfkjdkfjdkjfkjsdlkfjksldjf;asdjf;lasdjflskadjflkasdjflksdjfksdjfksdjlkj", verses: ["sjdjfkdsjfkjsdfkjsd"]),
+//        Lecture(id: 2, sigle: "1 Kol 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//        
+//        Lecture(id: 2, sigle: "Mt 3, 4-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//    ])
+//}
+//#Preview(as: .systemLarge) {
+//    LecturesWidget()
+//} timeline: {
+//    WidgetEntry(date: .now, family: .systemLarge, lectures: [
+//        Lecture(id: 1, sigle: "1 Sm 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//        Psalm(id: 1, chorus: "Test test fksdkjfjkdsjfkldsklfjadksjfkjdkfjdkjfkjsdlkfjksldjf;asdjf;lasdjflskadjflkasdjflksdjfksdjfksdjlkj", verses: ["sjdjfkdsjfkjsdfkjsd"]),
+//        Lecture(id: 2, sigle: "1 Kol 1, 8-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//        
+//        Lecture(id: 2, sigle: "Mt 3, 4-10", heading: "", content: "Testowy kontent czytania sjfkdjfklsdjfjsdlkfjdksfjkdsjfkdsajfjasdlkfklsjfkjsdklfjaldskjfkljsklfj"),
+//    ])
+//}

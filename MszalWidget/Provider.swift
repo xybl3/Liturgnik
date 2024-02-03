@@ -21,7 +21,6 @@ struct Provider: TimelineProvider {
         Task {
             var entries: [WidgetEntry] = []
             
-            // Generate a timeline consisting of five entries an hour apart, starting from the current date.
             let currentDate = Date()
             
             
@@ -32,8 +31,6 @@ struct Provider: TimelineProvider {
                 print(m.id)
                 if let dateFrom = DateUtils.dateFromString(from: m.dateFrom){
                     if let dateTo = DateUtils.dateFromString(from: m.dateTo) {
-                        
-                        //                        print("Date \(self.date.description) is \(isWithinRange(targetDate: self.date, startDate: dateFrom, endDate: dateTo))")
                         
                         return DateUtils.isWithinRange(targetDate: currentDate, startDate: dateFrom, endDate: dateTo)
                     }

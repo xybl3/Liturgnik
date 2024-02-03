@@ -11,6 +11,7 @@ import SwiftUI
 struct LiturgnikApp: App {
     
     init(){
+    
         Task {
            await ApiConnector.shared.fetchData()
             NotificationManager.shared.requestNotificationPermissions()

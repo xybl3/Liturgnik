@@ -71,18 +71,11 @@ class NotificationManager {
     
 }
 
-
-//enum NotificationContent {
-//    case lection
-//}
-//
-
 fileprivate extension NotificationManager {
     func buildLectureNotification(completion: @escaping (UNNotificationContent?) -> Void) {
         
         let content = UNMutableNotificationContent()
         content.title = "Liturgia"
-        //                content.body = occ
         content.subtitle = "Sprawdz liturgię na dzisiaj!"
         completion(content)
     }

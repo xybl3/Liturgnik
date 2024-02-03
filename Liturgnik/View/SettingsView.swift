@@ -30,14 +30,14 @@ struct NotificationSettingsView: View {
             DatePicker("Godzina", selection: $settingsViewModel.notificationTime, displayedComponents: .hourAndMinute)
                 .disabled(!settingsViewModel.isNotificationsEnabled)
         }
-        .onChange(of: settingsViewModel.notificationTime, { oldValue, newValue in
+        .onChange(of: settingsViewModel.notificationTime ){ newValue in
             
             settingsViewModel.handleDateChange()
             
-        })
-        .onChange(of: settingsViewModel.isNotificationsEnabled, { oldValue, newValue in
+        }
+        .onChange(of: settingsViewModel.isNotificationsEnabled) { newValue in
             settingsViewModel.handleStatusChange()
-        })
+        }
         
         .navigationTitle("Powiadomienia")
         .navigationBarTitleDisplayMode(.inline)
