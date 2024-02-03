@@ -29,7 +29,7 @@ struct HomeView: View {
                         }
                     }
                     Section("Wspomnienie"){
-                        Text(lecturesViewModel.occasion ?? "")
+                        Text(lecturesViewModel.occasion ?? "Nie można pobrać")
                     }
                     Section("Udział we mszy"){
                         switch lecturesViewModel.shouldAttend {

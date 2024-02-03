@@ -53,6 +53,23 @@
 		F1654EC52B4D4BDE002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
 		F1654EC62B4D4BDF002964BE /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
 		F1654EC92B4D4BF8002964BE /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1654EC82B4D4BF8002964BE /* SwiftSoup */; };
+		F172CF862B6EC93300569D0C /* LiturgnikWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F172CF852B6EC93300569D0C /* LiturgnikWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F172CF8B2B6EC93300569D0C /* LiturgnikWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172CF8A2B6EC93300569D0C /* LiturgnikWatchApp.swift */; };
+		F172CF8D2B6EC93300569D0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172CF8C2B6EC93300569D0C /* ContentView.swift */; };
+		F172CF8F2B6EC93500569D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F172CF8E2B6EC93500569D0C /* Assets.xcassets */; };
+		F172CF922B6EC93500569D0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F172CF912B6EC93500569D0C /* Preview Assets.xcassets */; };
+		F172CF952B6EC93500569D0C /* LiturgnikWatch.app in Resources */ = {isa = PBXBuildFile; fileRef = F172CF802B6EC93300569D0C /* LiturgnikWatch.app */; };
+		F172CF9E2B6EC99100569D0C /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE422B4D52110020D3FF /* DateUtils.swift */; };
+		F172CF9F2B6EC99500569D0C /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E0ED12B608167004797D6 /* ColorUtils.swift */; };
+		F172CFA02B6EC99900569D0C /* Liturgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2B92B68DFF6001D1915 /* Liturgy.swift */; };
+		F172CFA12B6EC99B00569D0C /* Lectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2BE2B68E125001D1915 /* Lectures.swift */; };
+		F172CFA22B6EC9A100569D0C /* DayLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C72B68E6F2001D1915 /* DayLoadingError.swift */; };
+		F172CFA42B6EC9AC00569D0C /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6A0A12B4DEB95009418F1 /* ApiConnector.swift */; };
+		F172CFA52B6EC9B000569D0C /* NiedzielaScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */; };
+		F172CFA62B6EC9B200569D0C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127CE622B65DA52009A9D84 /* NotificationManager.swift */; };
+		F172CFA82B6EC9CF00569D0C /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F172CFA72B6EC9CF00569D0C /* SwiftSoup */; };
+		F172CFAA2B6EC9E500569D0C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F172CFA92B6EC9E500569D0C /* SwiftUI.framework */; };
+		F172CFAB2B6ECBCF00569D0C /* LecturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B2C42B68E340001D1915 /* LecturesViewModel.swift */; };
 		F1BCEE392B4D51AB0020D3FF /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = F1BCEE382B4D51AA0020D3FF /* SwiftSoup */; };
 		F1BCEE3B2B4D51D70020D3FF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3A2B4D51D70020D3FF /* Provider.swift */; };
 		F1BCEE3D2B4D51E60020D3FF /* ColorWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */; };
@@ -92,6 +109,20 @@
 			remoteGlobalIDString = F1654EAA2B4D4B6A002964BE;
 			remoteInfo = ColorWidgetExtension;
 		};
+		F172CF872B6EC93300569D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F172CF842B6EC93300569D0C;
+			remoteInfo = "LiturgnikWatch Watch App";
+		};
+		F172CF932B6EC93500569D0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F172CF7F2B6EC93200569D0C;
+			remoteInfo = LiturgnikWatch;
+		};
 		F1BCEE542B4D55560020D3FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1654E8E2B4D4AF0002964BE /* Project object */;
@@ -113,6 +144,17 @@
 				F1BCEE562B4D55560020D3FF /* LecturesWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F172CF982B6EC93500569D0C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F172CF862B6EC93300569D0C /* LiturgnikWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -146,6 +188,13 @@
 		F1654EB62B4D4B6F002964BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1654EB82B4D4B6F002964BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1654EC42B4D4BDE002964BE /* NiedzielaScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiedzielaScraper.swift; sourceTree = "<group>"; };
+		F172CF802B6EC93300569D0C /* LiturgnikWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiturgnikWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F172CF852B6EC93300569D0C /* LiturgnikWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LiturgnikWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F172CF8A2B6EC93300569D0C /* LiturgnikWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiturgnikWatchApp.swift; sourceTree = "<group>"; };
+		F172CF8C2B6EC93300569D0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F172CF8E2B6EC93500569D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F172CF912B6EC93500569D0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F172CFA92B6EC9E500569D0C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.2.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 		F1BCEE3A2B4D51D70020D3FF /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		F1BCEE3C2B4D51E60020D3FF /* ColorWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWidget.swift; sourceTree = "<group>"; };
 		F1BCEE422B4D52110020D3FF /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
@@ -187,6 +236,15 @@
 				F1654EB02B4D4B6B002964BE /* SwiftUI.framework in Frameworks */,
 				F1654EAE2B4D4B6B002964BE /* WidgetKit.framework in Frameworks */,
 				F1BCEE392B4D51AB0020D3FF /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F172CF822B6EC93300569D0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F172CFAA2B6EC9E500569D0C /* SwiftUI.framework in Frameworks */,
+				F172CFA82B6EC9CF00569D0C /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +334,7 @@
 				F1BCEE412B4D520B0020D3FF /* Utils */,
 				F1BCEE4C2B4D55540020D3FF /* LecturesWidget */,
 				F120D1672B5013200009F5BB /* MszalWidget */,
+				F172CF892B6EC93300569D0C /* LiturgnikWatch Watch App */,
 				F1654EAC2B4D4B6B002964BE /* Frameworks */,
 				F1654E972B4D4AF0002964BE /* Products */,
 			);
@@ -288,6 +347,8 @@
 				F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */,
 				F1BCEE492B4D55540020D3FF /* LecturesWidgetExtension.appex */,
 				F120D1642B5013200009F5BB /* MszalWidgetExtension.appex */,
+				F172CF802B6EC93300569D0C /* LiturgnikWatch.app */,
+				F172CF852B6EC93300569D0C /* LiturgnikWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +383,7 @@
 		F1654EAC2B4D4B6B002964BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F172CFA92B6EC9E500569D0C /* SwiftUI.framework */,
 				F1654EAD2B4D4B6B002964BE /* WidgetKit.framework */,
 				F1654EAF2B4D4B6B002964BE /* SwiftUI.framework */,
 			);
@@ -346,6 +408,25 @@
 				F1D6A0A02B4DEB70009418F1 /* Api */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		F172CF892B6EC93300569D0C /* LiturgnikWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				F172CF8A2B6EC93300569D0C /* LiturgnikWatchApp.swift */,
+				F172CF8C2B6EC93300569D0C /* ContentView.swift */,
+				F172CF8E2B6EC93500569D0C /* Assets.xcassets */,
+				F172CF902B6EC93500569D0C /* Preview Content */,
+			);
+			path = "LiturgnikWatch Watch App";
+			sourceTree = "<group>";
+		};
+		F172CF902B6EC93500569D0C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F172CF912B6EC93500569D0C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		F1BCEE412B4D520B0020D3FF /* Utils */ = {
@@ -416,6 +497,7 @@
 				F1654EBA2B4D4B6F002964BE /* PBXTargetDependency */,
 				F1BCEE552B4D55560020D3FF /* PBXTargetDependency */,
 				F120D1702B5013220009F5BB /* PBXTargetDependency */,
+				F172CF942B6EC93500569D0C /* PBXTargetDependency */,
 			);
 			name = Liturgnik;
 			packageProductDependencies = (
@@ -444,6 +526,43 @@
 			productName = ColorWidgetExtension;
 			productReference = F1654EAB2B4D4B6B002964BE /* ColorWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		F172CF7F2B6EC93200569D0C /* LiturgnikWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F172CF9C2B6EC93500569D0C /* Build configuration list for PBXNativeTarget "LiturgnikWatch" */;
+			buildPhases = (
+				F172CF7E2B6EC93200569D0C /* Resources */,
+				F172CF982B6EC93500569D0C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F172CF882B6EC93300569D0C /* PBXTargetDependency */,
+			);
+			name = LiturgnikWatch;
+			productName = LiturgnikWatch;
+			productReference = F172CF802B6EC93300569D0C /* LiturgnikWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		F172CF842B6EC93300569D0C /* LiturgnikWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F172CF9B2B6EC93500569D0C /* Build configuration list for PBXNativeTarget "LiturgnikWatch Watch App" */;
+			buildPhases = (
+				F172CF812B6EC93300569D0C /* Sources */,
+				F172CF822B6EC93300569D0C /* Frameworks */,
+				F172CF832B6EC93300569D0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LiturgnikWatch Watch App";
+			packageProductDependencies = (
+				F172CFA72B6EC9CF00569D0C /* SwiftSoup */,
+			);
+			productName = "LiturgnikWatch Watch App";
+			productReference = F172CF852B6EC93300569D0C /* LiturgnikWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
 		};
 		F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -484,6 +603,12 @@
 					F1654EAA2B4D4B6A002964BE = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					F172CF7F2B6EC93200569D0C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F172CF842B6EC93300569D0C = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					F1BCEE482B4D55540020D3FF = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -509,6 +634,8 @@
 				F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */,
 				F1BCEE482B4D55540020D3FF /* LecturesWidgetExtension */,
 				F120D1632B5013200009F5BB /* MszalWidgetExtension */,
+				F172CF7F2B6EC93200569D0C /* LiturgnikWatch */,
+				F172CF842B6EC93300569D0C /* LiturgnikWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -527,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1654EA12B4D4AF1002964BE /* Preview Assets.xcassets in Resources */,
+				F172CF952B6EC93500569D0C /* LiturgnikWatch.app in Resources */,
 				F1654E9E2B4D4AF1002964BE /* Assets.xcassets in Resources */,
 				F1D6A0A72B4DEC19009418F1 /* Data.json in Resources */,
 			);
@@ -538,6 +666,22 @@
 			files = (
 				F1654EB72B4D4B6F002964BE /* Assets.xcassets in Resources */,
 				F1D6A0A82B4DEC19009418F1 /* Data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F172CF7E2B6EC93200569D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F172CF832B6EC93300569D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F172CF922B6EC93500569D0C /* Preview Assets.xcassets in Resources */,
+				F172CF8F2B6EC93500569D0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +755,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F172CF812B6EC93300569D0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F172CF8D2B6EC93300569D0C /* ContentView.swift in Sources */,
+				F172CF9E2B6EC99100569D0C /* DateUtils.swift in Sources */,
+				F172CFA62B6EC9B200569D0C /* NotificationManager.swift in Sources */,
+				F172CFA42B6EC9AC00569D0C /* ApiConnector.swift in Sources */,
+				F172CFA12B6EC99B00569D0C /* Lectures.swift in Sources */,
+				F172CFA02B6EC99900569D0C /* Liturgy.swift in Sources */,
+				F172CFA22B6EC9A100569D0C /* DayLoadingError.swift in Sources */,
+				F172CFAB2B6ECBCF00569D0C /* LecturesViewModel.swift in Sources */,
+				F172CF8B2B6EC93300569D0C /* LiturgnikWatchApp.swift in Sources */,
+				F172CFA52B6EC9B000569D0C /* NiedzielaScraper.swift in Sources */,
+				F172CF9F2B6EC99500569D0C /* ColorUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1BCEE452B4D55540020D3FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,6 +802,16 @@
 			isa = PBXTargetDependency;
 			target = F1654EAA2B4D4B6A002964BE /* ColorWidgetExtension */;
 			targetProxy = F1654EB92B4D4B6F002964BE /* PBXContainerItemProxy */;
+		};
+		F172CF882B6EC93300569D0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F172CF842B6EC93300569D0C /* LiturgnikWatch Watch App */;
+			targetProxy = F172CF872B6EC93300569D0C /* PBXContainerItemProxy */;
+		};
+		F172CF942B6EC93500569D0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F172CF7F2B6EC93200569D0C /* LiturgnikWatch */;
+			targetProxy = F172CF932B6EC93500569D0C /* PBXContainerItemProxy */;
 		};
 		F1BCEE552B4D55560020D3FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -942,6 +1114,96 @@
 			};
 			name = Release;
 		};
+		F172CF962B6EC93500569D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				INFOPLIST_KEY_CFBundleDisplayName = LiturgnikWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.LiturgnikWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F172CF972B6EC93500569D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				INFOPLIST_KEY_CFBundleDisplayName = LiturgnikWatch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.LiturgnikWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F172CF992B6EC93500569D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiturgnikWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LiturgnikWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.LiturgnikWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		F172CF9A2B6EC93500569D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LiturgnikWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 953L4WCQ6C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LiturgnikWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.marszalkowski.LiturgnikWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		F1BCEE582B4D55560020D3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1035,6 +1297,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F172CF9B2B6EC93500569D0C /* Build configuration list for PBXNativeTarget "LiturgnikWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F172CF992B6EC93500569D0C /* Debug */,
+				F172CF9A2B6EC93500569D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F172CF9C2B6EC93500569D0C /* Build configuration list for PBXNativeTarget "LiturgnikWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F172CF962B6EC93500569D0C /* Debug */,
+				F172CF972B6EC93500569D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1BCEE572B4D55560020D3FF /* Build configuration list for PBXNativeTarget "LecturesWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1064,6 +1344,11 @@
 			productName = SwiftSoup;
 		};
 		F1654EC82B4D4BF8002964BE /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		F172CFA72B6EC9CF00569D0C /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F1654EC72B4D4BF8002964BE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
