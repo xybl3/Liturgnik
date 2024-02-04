@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ColorWidgetWatchExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>LecturesWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,22 +27,42 @@
 		<key>LiturgnikWatch Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>MszalWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F120D1632B5013200009F5BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F1654E952B4D4AF0002964BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F1654EAA2B4D4B6A002964BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F172CF7F2B6EC93200569D0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F172CF842B6EC93300569D0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F172CFC32B6F06E300569D0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

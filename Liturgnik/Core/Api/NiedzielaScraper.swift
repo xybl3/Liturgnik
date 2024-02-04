@@ -7,12 +7,14 @@
 
 import Foundation
 import SwiftSoup
+import UIKit
 
 enum ScrapingError: Error {
     case lectureCountZero
     case cannotGetDayOccasion
     case vestmentColorError
     case sigleNotFound
+    case scrapeError
 }
 
 
@@ -250,4 +252,66 @@ class NiedzielaScraper: ObservableObject {
         
         return text == "Weź udział we Mszy św."
     }
+}
+
+
+class NiedzielaScraper2 {
+    
+    static let shared = NiedzielaScraper2()
+    
+    private init(){
+        print("Initizlize NiedzielaScraper")
+    }
+    
+    
+    private var date: Date = .now
+    private var document: Document?
+    private var url = URL(string: "https://widget.niedziela.pl/liturgia_out.js.php?")!
+    
+    func setDate(to date: Date?) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy-MM-dd"
+        
+        let formattedDate = dateFormatter.string(from: date ?? Date())
+        
+        self.url = URL(string: "https://widget.niedziela.pl/liturgia_out.js.php?data=\(formattedDate)")!
+    }
+    
+    func performScrape() async -> Void {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: self.url)
+            
+            
+            var htmlString = String(data: data, encoding: .utf8)
+//            print(htmlString)
+            
+            let replaceJSString = "\'); setTimeout"
+            
+            let replaceDocumentWriteJS = "document.write('"
+
+        
+            
+            guard htmlString != nil else {
+                print("Scraping error")
+                throw ScrapingError.scrapeError
+            }
+            
+            self.document = try SwiftSoup.parse(htmlString ?? "")
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    func getDayOccasion() throws -> String? {
+        
+        guard self.document != nil else {
+            throw ScrapingError.cannotGetDayOccasion
+        }
+        
+        
+        return String(try self.document?.select(".nd_dzien").first()?.text().split(separator: ", ")[1] ?? "")
+    }
+    
 }

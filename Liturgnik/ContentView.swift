@@ -90,9 +90,8 @@ struct ContentView: View {
                 .padding(.horizontal, 8)
                 .padding(.top, 14)
                 .frame(maxWidth: .infinity, maxHeight: 64, alignment: .top)
-                .background(.ultraThinMaterial)
-                .ignoresSafeArea()
-
+                .background(BlurEffect()
+                    .ignoresSafeArea())
             }
         }
     }

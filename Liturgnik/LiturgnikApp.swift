@@ -11,16 +11,20 @@ import SwiftUI
 struct LiturgnikApp: App {
     
     init(){
-    
+        
         Task {
-           await ApiConnector.shared.fetchData()
+            await ApiConnector.shared.fetchData()
             NotificationManager.shared.requestNotificationPermissions()
             
-//
-//            let ch = Calendar.current.component(.hour, from: .now)
-//            let cm = Calendar.current.component(.minute, from: .now)
-//            
-//            NotificationManager.shared.scheduleNotification(hour:ch, minutes: cm+1)
+            try? await NiedzielaScraper2.shared.performScrape()
+            
+            print(try NiedzielaScraper2.shared.getDayOccasion() ?? "XD")
+            
+            //
+            //            let ch = Calendar.current.component(.hour, from: .now)
+            //            let cm = Calendar.current.component(.minute, from: .now)
+            //
+            //            NotificationManager.shared.scheduleNotification(hour:ch, minutes: cm+1)
         }
     }
     
