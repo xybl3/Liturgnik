@@ -22,7 +22,6 @@ struct LecturesWidgetEntryView : View {
         VStack {
             HStack {
                 Text(DateUtils.formatLocalizedDate(date: entry.date))
-                    .widgetAccentable()
                     .font(.title3)
                     .bold()
                 Spacer()
@@ -31,15 +30,16 @@ struct LecturesWidgetEntryView : View {
                 ForEach(entry.lectures.indices, id: \.self) { index in
                     if let czytanie = entry.lectures[index] as? Lecture {
                         Text(czytanie.sigle)
+                            .bold()
                             .lineLimit(1)
                             .font(.footnote)
-                            .bold()
+                            
                     }
                     if let psalm = entry.lectures[index] as? Psalm {
                         Text(psalm.chorus)
+                            .bold()
                             .lineLimit(1)
                             .font(.footnote)
-                            .bold()
                     }
                     Divider()
                 }

@@ -16,9 +16,9 @@ struct LiturgnikApp: App {
             await ApiConnector.shared.fetchData()
             NotificationManager.shared.requestNotificationPermissions()
             
-            try? await NiedzielaScraper2.shared.performScrape()
-            
-            print(try NiedzielaScraper2.shared.getDayOccasion() ?? "XD")
+//            await NiedzielaScraper2.shared.performScrape()
+//            
+//            print(try NiedzielaScraper2.shared.getDayOccasion() ?? "XD")
             
             //
             //            let ch = Calendar.current.component(.hour, from: .now)

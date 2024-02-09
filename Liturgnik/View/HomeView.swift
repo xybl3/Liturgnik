@@ -35,8 +35,9 @@ struct HomeView: View {
                         switch lecturesViewModel.shouldAttend {
                         case true:
                             Text("Udział we mszy świętej nakazany!")
-                                .foregroundStyle(.red)
                                 .bold()
+                                .foregroundStyle(.red)
+                                
                         case false:
                             Text("Udział we mszy świętej nie jest nakazany")
                             
@@ -48,7 +49,7 @@ struct HomeView: View {
             case .loading:
                 ProgressView()
             case .error:
-                Text("Wystąpił błąd :(")
+                InternetConnectionErrorView()
             }
         }
         .transition(.opacity)

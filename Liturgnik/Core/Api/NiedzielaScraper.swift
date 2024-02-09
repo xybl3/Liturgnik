@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftSoup
-import UIKit
 
 enum ScrapingError: Error {
     case lectureCountZero
@@ -114,8 +113,10 @@ class NiedzielaScraper: ObservableObject {
                         }
                     }
                     
+                   
+                    
                     // To jest czytanie
-                    if sigle.starts(with: /\d\./) {
+                    if sigle.range(of: "^\\d\\.", options: .regularExpression) != nil {
                         let id = Int(Array(arrayLiteral: sigle)[0])
                         let withoutCzytanie = sigle
                             .replacingOccurrences(of: "czytanie", with: "")
@@ -138,7 +139,7 @@ class NiedzielaScraper: ObservableObject {
                         
                         lectures.append(Lecture(id: id ?? 0, sigle: String(withoutCzytanie), heading: "", content: content))
                     }
-                    else if sigle.starts(with: "Psalm") {
+                    else if sigle.range(of: "Psalm", options: .regularExpression) != nil {
                         let chorus = try lecture.select("#tabnowy0\(index) > h4 > em").first()
                         guard let chorus = chorus else {
                             print("Chorus not found")
@@ -160,7 +161,7 @@ class NiedzielaScraper: ObservableObject {
                         
                     }
                     
-                    else if sigle.starts(with: "Aklamacja") {
+                    else if sigle.range(of: "Aklamacja", options: .regularExpression) != nil {
                         
                         let chorus = try lecture.select("#tabnowy0\(index) > h4").text()
                         
@@ -172,7 +173,7 @@ class NiedzielaScraper: ObservableObject {
                         
                         lectures.append(Acclamation(id: index+1, chorus: chorus, verses: verses))
                     }
-                    else if sigle.starts(with: "Ewangelia"){
+                    else if sigle.range(of: "Ewangelia", options: .regularExpression) != nil{
                         let rawSigle = sigle
                             .replacingOccurrences(of: "Ewangelia", with: "")
                             .replacingOccurrences(of: "(", with: "")
@@ -311,7 +312,7 @@ class NiedzielaScraper2 {
         }
         
         
-        return String(try self.document?.select(".nd_dzien").first()?.text().split(separator: ", ")[1] ?? "")
+        return String(try self.document?.select(".nd_dzien").first()?.text().components(separatedBy: ", ")[1] ?? "")
     }
     
 }

@@ -21,15 +21,12 @@ struct LiturgyView: View {
                             if let lecture = lecturesViewModel.lectures[index] as? Lecture {
                                 NavigationLink(lecture.sigle){
                                     LectureView(lecture: lecture)
-                                        .navigationTitle(lecture.sigle)
-                                        .navigationBarTitleDisplayMode(.inline)
+                                    
                                 }
                             }
                             else if let psalm = lecturesViewModel.lectures[index] as? Psalm{
                                 NavigationLink("Psalm"){
                                     PsalmView(psalm: psalm)
-                                        .navigationTitle("Psalm")
-                                        .navigationBarTitleDisplayMode(.inline)
                                 }
                             }
                         }
@@ -52,7 +49,7 @@ struct LiturgyView: View {
             case .loading:
                 ProgressView()
             case .error:
-                Text("Wystąpił błąd :(")
+                InternetConnectionErrorView()
             }
         }
         .navigationTitle("Liturgia")
@@ -69,13 +66,22 @@ struct LiturgyView: View {
 
 struct LectureView: View {
     let lecture: Lecture
-
+    
+    @State private var fontSize: CGFloat = 20
     
     var body: some View {
         ScrollView {
             Text(lecture.content)
-                .monospaced()
+                .font(.system(size: fontSize).monospaced())
                 .padding()
+            
+        }
+        .navigationTitle(lecture.sigle)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ZoomInOutButtons(fontSize: $fontSize)
+            }
         }
     }
 }
@@ -83,17 +89,49 @@ struct LectureView: View {
 struct PsalmView: View {
     let psalm: Psalm
     
+    @State private var fontSize: CGFloat = 20
+    
     var body: some View {
         ScrollView{
             ForEach(psalm.verses, id: \.self) { verse in
                 Text(verse)
-                    .monospaced()
+                    .font(.system(size: fontSize).monospaced())
                 Text(psalm.chorus)
-                    .fontWeight(.black)
+                    .font(.system(size: fontSize).monospaced().weight(.black))
                     .padding(.vertical)
-                    .monospaced()
             }
-            .padding()
+        }
+        .navigationTitle("Psalm")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                ZoomInOutButtons(fontSize: $fontSize)
+            }
+        }
+    }
+}
+
+
+
+struct ZoomInOutButtons: View {
+    @Binding var fontSize: CGFloat
+    var body: some View {
+        HStack {
+            Button {
+                if fontSize > 5 {
+                    fontSize-=1
+                }
+            } label: {
+                Text("a")
+            }
+            Divider()
+            Button {
+                if fontSize < 50 {
+                    fontSize+=1
+                }
+            } label: {
+                Text("A")
+            }
         }
     }
 }

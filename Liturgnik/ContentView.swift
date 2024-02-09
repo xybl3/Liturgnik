@@ -70,8 +70,11 @@ struct ContentView: View {
                 
                 HStack {
                     ForEach(tabItems) { tabItem in
+                        
                         Button{
-                            selection = tabItem.selection
+                            withAnimation(.easeIn){
+                                selection = tabItem.selection
+                            }
                         } label: {
                             VStack(spacing: 0){
                                 Image(systemName: tabItem.icon)

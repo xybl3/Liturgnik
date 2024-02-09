@@ -57,8 +57,13 @@ struct ColorWidgetEntryView : View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(DateUtils.formatDayMonth(date: entry.date))
-                        .widgetAccentable()
+                    if #available(iOS 16, *){
+                        Text(DateUtils.formatDayMonth(date: entry.date))
+                            .widgetAccentable()
+                    }
+                    else {
+                        Text(DateUtils.formatDayMonth(date: entry.date))
+                    }
                     Spacer()
                     if let shouldAttend = entry.shouldAttend {
                         if shouldAttend {
@@ -73,17 +78,17 @@ struct ColorWidgetEntryView : View {
                     .lineLimit(1)
                     .font(.title2.bold())
                     .foregroundStyle(ColorUtils.getTextColorBasedOnVestureColor(for: entry.vestmentColor, in: colorScheme))
-                    .widgetAccentable()
+//                    .widgetAccentable()
             }
             Spacer()
-//            if let shouldAttend = entry.shouldAttend {
-//                if shouldAttend {
-//                    Text("Uczestnictwo nakazane")
-//                        .font(.caption)
-//                        .minimumScaleFactor(0.7)
-//                        .foregroundStyle(.red)
-//                }
-//            }
+            //            if let shouldAttend = entry.shouldAttend {
+            //                if shouldAttend {
+            //                    Text("Uczestnictwo nakazane")
+            //                        .font(.caption)
+            //                        .minimumScaleFactor(0.7)
+            //                        .foregroundStyle(.red)
+            //                }
+            //            }
             if let occasion = entry.occasion {
                 VStack(alignment: .leading) {
                     Text(occasion)
@@ -98,7 +103,7 @@ struct ColorWidgetEntryView : View {
     @ViewBuilder
     func renderAccessory(for entry: DayEntry, year: String?) -> some View {
         VStack(alignment: .leading) {
-//            Text(DateUtils.formatLocalizedDate(date: .now))
+            //            Text(DateUtils.formatLocalizedDate(date: .now))
             if let occasion = entry.occasion {
                 Text(occasion)
                     .lineLimit(1)
@@ -120,19 +125,36 @@ struct ColorWidget: Widget {
     let kind: String = "ColorWidget"
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                ColorWidgetEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-            } else {
-                ColorWidgetEntryView(entry: entry)
-                    .padding()
-                    .background()
+        if #available(iOS 16, *){
+            StaticConfiguration(kind: kind, provider: Provider()) { entry in
+                if #available(iOS 17.0, *) {
+                    ColorWidgetEntryView(entry: entry)
+                        .containerBackground(.fill.tertiary, for: .widget)
+                } else {
+                    ColorWidgetEntryView(entry: entry)
+                        .padding()
+                        .background()
+                }
             }
+            .configurationDisplayName("Kolor szat")
+            .description("Kolor szat liturgicznych na dany dzien")
+            .supportedFamilies([.systemSmall, .accessoryRectangular, .systemMedium])
         }
-        .configurationDisplayName("Kolor szat")
-        .description("Kolor szat liturgicznych na dany dzien")
-        .supportedFamilies([.systemSmall, .accessoryRectangular, .systemMedium])
+        else {
+            StaticConfiguration(kind: kind, provider: Provider()) { entry in
+                if #available(iOS 17.0, *) {
+                    ColorWidgetEntryView(entry: entry)
+                        .containerBackground(.fill.tertiary, for: .widget)
+                } else {
+                    ColorWidgetEntryView(entry: entry)
+                        .padding()
+                        .background()
+                }
+            }
+            .configurationDisplayName("Kolor szat")
+            .description("Kolor szat liturgicznych na dany dzien")
+            .supportedFamilies([.systemSmall, .systemMedium])
+        }
     }
 }
 

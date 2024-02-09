@@ -9,7 +9,18 @@ import SwiftUI
 
 struct InternetConnectionErrorView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            Image(systemName: "cloud")
+                .font(.system(size: 100))
+                .foregroundColor(.gray)
+                .padding(.top, 50)
+            
+            Text("Brak połączenia API.\nSprawdź swoje połączenie z internetem.")
+                .font(.headline)
+                .foregroundColor(.gray)
+        }
+        .frame(width: 300, height: 300)
     }
 }
 
